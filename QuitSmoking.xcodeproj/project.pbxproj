@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530CF5212ABF5F00A173D6 /* AppDelegate.swift */; };
+		35530CF8212ABF5F00A173D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530CF7212ABF5F00A173D6 /* ViewController.swift */; };
+		35530CFB212ABF5F00A173D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530CF9212ABF5F00A173D6 /* Main.storyboard */; };
+		35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */; };
+		35530D00212ABF6000A173D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35530CFF212ABF6000A173D6 /* Assets.xcassets */; };
+		35530D03212ABF6000A173D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */; };
+		35530D0E212ABF6000A173D6 /* QuitSmokingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */; };
+		35530D19212ABF6000A173D6 /* QuitSmokingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35530D0A212ABF6000A173D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35530CEA212ABF5F00A173D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35530CF1212ABF5F00A173D6;
+			remoteInfo = QuitSmoking;
+		};
+		35530D15212ABF6000A173D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35530CEA212ABF5F00A173D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35530CF1212ABF5F00A173D6;
+			remoteInfo = QuitSmoking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35530CF2212ABF5F00A173D6 /* QuitSmoking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmoking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35530CF5212ABF5F00A173D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		35530CF7212ABF5F00A173D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35530CFA212ABF5F00A173D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35530CFD212ABF5F00A173D6 /* QuitSmoking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuitSmoking.xcdatamodel; sourceTree = "<group>"; };
+		35530CFF212ABF6000A173D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35530D02212ABF6000A173D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		35530D04212ABF6000A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35530D09212ABF6000A173D6 /* QuitSmokingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitSmokingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingTests.swift; sourceTree = "<group>"; };
+		35530D0F212ABF6000A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35530D14212ABF6000A173D6 /* QuitSmokingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitSmokingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingUITests.swift; sourceTree = "<group>"; };
+		35530D1A212ABF6000A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35530CEF212ABF5F00A173D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35530D06212ABF6000A173D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35530D11212ABF6000A173D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35530CE9212ABF5F00A173D6 = {
+			isa = PBXGroup;
+			children = (
+				35530CF4212ABF5F00A173D6 /* QuitSmoking */,
+				35530D0C212ABF6000A173D6 /* QuitSmokingTests */,
+				35530D17212ABF6000A173D6 /* QuitSmokingUITests */,
+				35530CF3212ABF5F00A173D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35530CF3212ABF5F00A173D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35530CF2212ABF5F00A173D6 /* QuitSmoking.app */,
+				35530D09212ABF6000A173D6 /* QuitSmokingTests.xctest */,
+				35530D14212ABF6000A173D6 /* QuitSmokingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35530CF4212ABF5F00A173D6 /* QuitSmoking */ = {
+			isa = PBXGroup;
+			children = (
+				35530CF5212ABF5F00A173D6 /* AppDelegate.swift */,
+				35530CF7212ABF5F00A173D6 /* ViewController.swift */,
+				35530CF9212ABF5F00A173D6 /* Main.storyboard */,
+				35530CFF212ABF6000A173D6 /* Assets.xcassets */,
+				35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */,
+				35530D04212ABF6000A173D6 /* Info.plist */,
+				35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */,
+			);
+			path = QuitSmoking;
+			sourceTree = "<group>";
+		};
+		35530D0C212ABF6000A173D6 /* QuitSmokingTests */ = {
+			isa = PBXGroup;
+			children = (
+				35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */,
+				35530D0F212ABF6000A173D6 /* Info.plist */,
+			);
+			path = QuitSmokingTests;
+			sourceTree = "<group>";
+		};
+		35530D17212ABF6000A173D6 /* QuitSmokingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */,
+				35530D1A212ABF6000A173D6 /* Info.plist */,
+			);
+			path = QuitSmokingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35530CF1212ABF5F00A173D6 /* QuitSmoking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35530D1D212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmoking" */;
+			buildPhases = (
+				35530CEE212ABF5F00A173D6 /* Sources */,
+				35530CEF212ABF5F00A173D6 /* Frameworks */,
+				35530CF0212ABF5F00A173D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuitSmoking;
+			productName = QuitSmoking;
+			productReference = 35530CF2212ABF5F00A173D6 /* QuitSmoking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35530D08212ABF6000A173D6 /* QuitSmokingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35530D20212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmokingTests" */;
+			buildPhases = (
+				35530D05212ABF6000A173D6 /* Sources */,
+				35530D06212ABF6000A173D6 /* Frameworks */,
+				35530D07212ABF6000A173D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35530D0B212ABF6000A173D6 /* PBXTargetDependency */,
+			);
+			name = QuitSmokingTests;
+			productName = QuitSmokingTests;
+			productReference = 35530D09212ABF6000A173D6 /* QuitSmokingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		35530D13212ABF6000A173D6 /* QuitSmokingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35530D23212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmokingUITests" */;
+			buildPhases = (
+				35530D10212ABF6000A173D6 /* Sources */,
+				35530D11212ABF6000A173D6 /* Frameworks */,
+				35530D12212ABF6000A173D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35530D16212ABF6000A173D6 /* PBXTargetDependency */,
+			);
+			name = QuitSmokingUITests;
+			productName = QuitSmokingUITests;
+			productReference = 35530D14212ABF6000A173D6 /* QuitSmokingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35530CEA212ABF5F00A173D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = DreamTeam;
+				TargetAttributes = {
+					35530CF1212ABF5F00A173D6 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					35530D08212ABF6000A173D6 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 35530CF1212ABF5F00A173D6;
+					};
+					35530D13212ABF6000A173D6 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 35530CF1212ABF5F00A173D6;
+					};
+				};
+			};
+			buildConfigurationList = 35530CED212ABF5F00A173D6 /* Build configuration list for PBXProject "QuitSmoking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35530CE9212ABF5F00A173D6;
+			productRefGroup = 35530CF3212ABF5F00A173D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35530CF1212ABF5F00A173D6 /* QuitSmoking */,
+				35530D08212ABF6000A173D6 /* QuitSmokingTests */,
+				35530D13212ABF6000A173D6 /* QuitSmokingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35530CF0212ABF5F00A173D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35530D03212ABF6000A173D6 /* LaunchScreen.storyboard in Resources */,
+				35530D00212ABF6000A173D6 /* Assets.xcassets in Resources */,
+				35530CFB212ABF5F00A173D6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35530D07212ABF6000A173D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35530D12212ABF6000A173D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35530CEE212ABF5F00A173D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */,
+				35530CF8212ABF5F00A173D6 /* ViewController.swift in Sources */,
+				35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35530D05212ABF6000A173D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35530D0E212ABF6000A173D6 /* QuitSmokingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35530D10212ABF6000A173D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35530D19212ABF6000A173D6 /* QuitSmokingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35530D0B212ABF6000A173D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35530CF1212ABF5F00A173D6 /* QuitSmoking */;
+			targetProxy = 35530D0A212ABF6000A173D6 /* PBXContainerItemProxy */;
+		};
+		35530D16212ABF6000A173D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35530CF1212ABF5F00A173D6 /* QuitSmoking */;
+			targetProxy = 35530D15212ABF6000A173D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35530CF9212ABF5F00A173D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35530CFA212ABF5F00A173D6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35530D02212ABF6000A173D6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35530D1B212ABF6000A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		35530D1C212ABF6000A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35530D1E212ABF6000A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuitSmoking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmoking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35530D1F212ABF6000A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuitSmoking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmoking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		35530D21212ABF6000A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuitSmokingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmokingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuitSmoking.app/QuitSmoking";
+			};
+			name = Debug;
+		};
+		35530D22212ABF6000A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuitSmokingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmokingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuitSmoking.app/QuitSmoking";
+			};
+			name = Release;
+		};
+		35530D24212ABF6000A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuitSmokingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmokingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuitSmoking;
+			};
+			name = Debug;
+		};
+		35530D25212ABF6000A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuitSmokingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmokingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuitSmoking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35530CED212ABF5F00A173D6 /* Build configuration list for PBXProject "QuitSmoking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35530D1B212ABF6000A173D6 /* Debug */,
+				35530D1C212ABF6000A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35530D1D212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmoking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35530D1E212ABF6000A173D6 /* Debug */,
+				35530D1F212ABF6000A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35530D20212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmokingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35530D21212ABF6000A173D6 /* Debug */,
+				35530D22212ABF6000A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35530D23212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmokingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35530D24212ABF6000A173D6 /* Debug */,
+				35530D25212ABF6000A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				35530CFD212ABF5F00A173D6 /* QuitSmoking.xcdatamodel */,
+			);
+			currentVersion = 35530CFD212ABF5F00A173D6 /* QuitSmoking.xcdatamodel */;
+			path = QuitSmoking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 35530CEA212ABF5F00A173D6 /* Project object */;
+}
