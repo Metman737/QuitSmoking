@@ -15,6 +15,7 @@
 		35530D03212ABF6000A173D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */; };
 		35530D0E212ABF6000A173D6 /* QuitSmokingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */; };
 		35530D19212ABF6000A173D6 /* QuitSmokingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */; };
+		357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357543D6219062D400C0BC68 /* UserInformationViewController.swift */; };
 		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		35530D14212ABF6000A173D6 /* QuitSmokingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitSmokingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingUITests.swift; sourceTree = "<group>"; };
 		35530D1A212ABF6000A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		357543D6219062D400C0BC68 /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
 		9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.release.xcconfig"; sourceTree = "<group>"; };
 		C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmoking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 				35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */,
 				35530D04212ABF6000A173D6 /* Info.plist */,
 				35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */,
+				357543D6219062D400C0BC68 /* UserInformationViewController.swift */,
 			);
 			path = QuitSmoking;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */,
 				35530CF8212ABF5F00A173D6 /* ViewController.swift in Sources */,
+				357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */,
 				35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
