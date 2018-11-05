@@ -15,6 +15,7 @@
 		35530D03212ABF6000A173D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */; };
 		35530D0E212ABF6000A173D6 /* QuitSmokingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */; };
 		35530D19212ABF6000A173D6 /* QuitSmokingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */; };
+		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171CB07844A1183B7A913FDB /* Pods-QuitSmoking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.debug.xcconfig"; sourceTree = "<group>"; };
 		35530CF2212ABF5F00A173D6 /* QuitSmoking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmoking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35530CF5212ABF5F00A173D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35530CF7212ABF5F00A173D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		35530D14212ABF6000A173D6 /* QuitSmokingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitSmokingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingUITests.swift; sourceTree = "<group>"; };
 		35530D1A212ABF6000A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.release.xcconfig"; sourceTree = "<group>"; };
+		C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmoking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A7312C5C12716E6125D12AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				171CB07844A1183B7A913FDB /* Pods-QuitSmoking.debug.xcconfig */,
+				9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		35530CE9212ABF5F00A173D6 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,8 @@
 				35530D0C212ABF6000A173D6 /* QuitSmokingTests */,
 				35530D17212ABF6000A173D6 /* QuitSmokingUITests */,
 				35530CF3212ABF5F00A173D6 /* Products */,
+				0A7312C5C12716E6125D12AC /* Pods */,
+				B22030DA739BEF2E86FC5978 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +144,14 @@
 			path = QuitSmokingUITests;
 			sourceTree = "<group>";
 		};
+		B22030DA739BEF2E86FC5978 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35530D1D212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmoking" */;
 			buildPhases = (
+				0AE1FF912F50F44CB768E9EF /* [CP] Check Pods Manifest.lock */,
 				35530CEE212ABF5F00A173D6 /* Sources */,
 				35530CEF212ABF5F00A173D6 /* Frameworks */,
 				35530CF0212ABF5F00A173D6 /* Resources */,
+				350A38F81FA8F939BD8EFCF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,13 +222,16 @@
 				TargetAttributes = {
 					35530CF1212ABF5F00A173D6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					35530D08212ABF6000A173D6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 35530CF1212ABF5F00A173D6;
 					};
 					35530D13212ABF6000A173D6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 35530CF1212ABF5F00A173D6;
 					};
 				};
@@ -253,6 +282,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AE1FF912F50F44CB768E9EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuitSmoking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		350A38F81FA8F939BD8EFCF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35530CEE212ABF5F00A173D6 /* Sources */ = {
@@ -432,36 +508,40 @@
 		};
 		35530D1E212ABF6000A173D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 171CB07844A1183B7A913FDB /* Pods-QuitSmoking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QQ297YHC3;
 				INFOPLIST_FILE = QuitSmoking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmoking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		35530D1F212ABF6000A173D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QQ297YHC3;
 				INFOPLIST_FILE = QuitSmoking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmoking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -480,7 +560,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmokingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuitSmoking.app/QuitSmoking";
 			};
@@ -500,7 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmokingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuitSmoking.app/QuitSmoking";
 			};
@@ -519,7 +599,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmokingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = QuitSmoking;
 			};
@@ -538,7 +618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.DreamTeam.QuitSmokingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = QuitSmoking;
 			};
