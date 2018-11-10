@@ -33,4 +33,16 @@ class QuitSmokingUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testAddButtonClicked(){
+        // Button test
+        
+        let app = XCUIApplication()
+        
+        app.buttons["AddCigarrette"].tap()
+        app.staticTexts["Add Cigarette"].tap()
+        
+        XCTAssertEqual(app.buttons["AddCigarrette"].index(ofAccessibilityElement: 1), app.buttons["AddCigarrette"].index(ofAccessibilityElement: 1))
+        
+    }
+
 }

@@ -16,7 +16,7 @@
 		35530D0E212ABF6000A173D6 /* QuitSmokingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */; };
 		35530D19212ABF6000A173D6 /* QuitSmokingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */; };
 		357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357543D6219062D400C0BC68 /* UserInformationViewController.swift */; };
-		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; };
+		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -501,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -595,7 +595,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QQ297YHC3;
 				INFOPLIST_FILE = QuitSmokingUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,7 +616,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QQ297YHC3;
 				INFOPLIST_FILE = QuitSmokingUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
