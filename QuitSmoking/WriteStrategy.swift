@@ -11,6 +11,6 @@ import SQLite
 
 protocol WriteStrategy{
     
-    func writeToDatabase(databaseConnection: Connection,tableName: String, columnKey: WriteDataHolder, value: String) throws
+    func writeToDatabase(databaseConnection: Connection,tableName: String, columnKey: ColumnNameWrapper, value: String) throws
     
 }

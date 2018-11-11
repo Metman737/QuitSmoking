@@ -9,7 +9,7 @@
 import Foundation
 import SQLite
 
-class WriteDataHolder{
+class ColumnNameWrapper{
     
     var writeInt64Exp: Expression<Int64>?
     var writeStringExpr: Expression<String>?

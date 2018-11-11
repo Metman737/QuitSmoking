@@ -16,9 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let blabla = Int64Writer()
-        blabla.write("id", "3")
-        blabla.write(Exp, "3")
         
 
     }

@@ -11,10 +11,12 @@ import SQLite
 
 class Int64Writer: WriteStrategy {
  
-    func writeToDatabase(databaseConnection: Connection, tableName: String, columnKey: WriteDataHolder, value: String) {
+    func writeToDatabase(databaseConnection: Connection, tableName: String, columnKey: ColumnNameWrapper, value: String) {
         do{
             try databaseConnection.run(Table(tableName).insert(or: .replace, columnKey.writeInt64Exp! <- Int64(value)!))
         }
-        catch{}
+        catch{
+            fatalError("Shit sucks yo") 
+        }
     }
 }
