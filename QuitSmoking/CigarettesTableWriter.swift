@@ -26,7 +26,8 @@ class CigaretteTableHandler: TableHandler {
         }
     }
     
-    func readFromTable(valueArray: String) {
+    func readFromTable(columnKeys: [String], ID: Expression<Int64>) -> [String: String]  {
+        
     }
     
     

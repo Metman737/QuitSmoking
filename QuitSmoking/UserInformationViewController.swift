@@ -36,7 +36,6 @@ class UserInformationViewController: UIViewController {
     let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db"
     let tableName = "User"
     let columnNames: [String] = ["Name", "Geburtstdatum", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
-    let uiTextFieldStartValues: [String] = ["Name", "Geburtsdatum", "Anfangsjahr", "Durchschnitt"]
     
     @IBAction func onSubmitTap() {
         let valueDictionary: [String: String] = getValueDictionary()
@@ -71,7 +70,7 @@ class UserInformationViewController: UIViewController {
     
     private func arePreconditionsFulfilled(valueArray: [String: String]) -> Bool{
         if checkRequiredFields(valueArray: valueArray).isEmpty{
-                return true
+            return true
         }
         return false
     }
@@ -86,19 +85,5 @@ class UserInformationViewController: UIViewController {
         }
         return resultKeys
     }
-
-    /**
-    private func checkFormatting(valueArray: [String: String]) -> [String]{
-        var resultKeys: [String]
-        for key in valueArray.keys {
-            switch (key){
-                case ""
-            }
-            
-        }
-  
-        return true
-    }
-     **/
 }
 
