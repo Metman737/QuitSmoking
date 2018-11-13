@@ -12,8 +12,7 @@ class UserInformationViewController: UIViewController {
     
     //Geburtstag
     @IBOutlet weak var birthdayLabel: UILabel!
-    //@IBOutlet weak var birthdayTextField: UITextField!
-    @IBOutlet weak var BirthdayDatePicker: UIDatePicker!
+    @IBOutlet weak var birthdayTextField: UITextField!
     
     //Gewicht in Kg
     @IBOutlet weak var weightLabel: UILabel!
@@ -33,6 +32,7 @@ class UserInformationViewController: UIViewController {
 
     @IBOutlet weak var submitButton: UIButton!
     
+    
     let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db"
     let tableName = "User"
     let columnNames: [String] = ["Name", "Geburtstdatum", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
@@ -46,13 +46,36 @@ class UserInformationViewController: UIViewController {
         }
     }
     
+    //MARK: Override
+    
     override func viewDidLoad() {
+        
+        //Datapicker
+        let datapicker = UIDatePicker()
+        datapicker.datePickerMode = UIDatePicker.Mode.date
+        datapicker.addTarget(self, action: #selector(UserInformationViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+        birthdayTextField.inputView = datapicker
+        
         super.viewDidLoad()  
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+
+    //MARK: Functions
+    
+    //Datapicker Funktion
+    @objc func datePickerValueChanged(sender: UIDatePicker){
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        formatter.timeStyle = DateFormatter.Style.none
+        birthdayTextField.text = formatter.string(from: sender.date)
     }
     
     private func getValueDictionary() -> [String: String] {
