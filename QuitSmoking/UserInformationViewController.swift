@@ -40,13 +40,16 @@ class UserInformationViewController: UIViewController {
 
     @IBOutlet weak var submitButton: UIButton!
     
-    let tablePath = "/Volumes/Extreme 900/Project 05/QuitSmoking/Database/cigarettes.db"
+    let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db"
     let tableName = "User"
     let columnNames: [String] = ["id", "Geburtstdatum", "Name", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
     let uiTextFieldStartValues: [String] = ["Name", "Geburtsdatum", "Anfangsjahr", "Durchschnitt"]
     
-    @IBAction func onSubmitClick() {
-        if areTextFieldsFilled(uiTextFields: getUITextFields()){
+    @IBAction func onSubmitTap() {
+        let dbHandler = DatabaseHandler()
+        dbHandler.writeStringToDatabase()
+        /**
+        if areTextFieldsFilled(){
             let writeStrategy = StringWriter()
             let columnNameWrapper = ColumnNameWrapper()
             columnNameWrapper.writeStringExpr = Expression<String>("Name")
@@ -58,6 +61,7 @@ class UserInformationViewController: UIViewController {
                     fatalError("Can not connect to database")
             }
         }
+ **/
     }
     
     override func viewDidLoad() {
@@ -74,8 +78,8 @@ class UserInformationViewController: UIViewController {
         return uiTextFields
     }
     
-    private func areTextFieldsFilled(uiTextFields: [UITextField]) -> Bool{
-        for uiTextField in uiTextFields {
+    private func areTextFieldsFilled() -> Bool{
+        for uiTextField in getUITextFields() {
             if uiTextField.text!.isEmpty || uiTextFieldStartValues.contains(uiTextField.text!){
                 return false
             }

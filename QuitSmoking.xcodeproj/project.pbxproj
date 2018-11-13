@@ -16,12 +16,8 @@
 		35530D0E212ABF6000A173D6 /* QuitSmokingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */; };
 		35530D19212ABF6000A173D6 /* QuitSmokingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */; };
 		357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357543D6219062D400C0BC68 /* UserInformationViewController.swift */; };
-		35C3C57E219588AE0090482B /* WriteStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3C57D219588AE0090482B /* WriteStrategy.swift */; };
-		35C3C5802195894D0090482B /* ColumnNameWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3C57F2195894D0090482B /* ColumnNameWrapper.swift */; };
 		35FF4D18219180A700EB65D6 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF4D17219180A700EB65D6 /* DatabaseHandler.swift */; };
-		35FF4D1B2191ABD200EB65D6 /* Int64Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF4D1A2191ABD200EB65D6 /* Int64Writer.swift */; };
 		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; };
-		61338CE221972914001978A5 /* StringWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61338CE121972914001978A5 /* StringWriter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +54,7 @@
 		35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingUITests.swift; sourceTree = "<group>"; };
 		35530D1A212ABF6000A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		357543D6219062D400C0BC68 /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
-		35C3C57D219588AE0090482B /* WriteStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteStrategy.swift; sourceTree = "<group>"; };
-		35C3C57F2195894D0090482B /* ColumnNameWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnNameWrapper.swift; sourceTree = "<group>"; };
 		35FF4D17219180A700EB65D6 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
-		35FF4D1A2191ABD200EB65D6 /* Int64Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int64Writer.swift; sourceTree = "<group>"; };
-		61338CE121972914001978A5 /* StringWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringWriter.swift; sourceTree = "<group>"; };
 		9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.release.xcconfig"; sourceTree = "<group>"; };
 		C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmoking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,11 +127,7 @@
 				35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */,
 				357543D6219062D400C0BC68 /* UserInformationViewController.swift */,
 				35FF4D17219180A700EB65D6 /* DatabaseHandler.swift */,
-				35FF4D1A2191ABD200EB65D6 /* Int64Writer.swift */,
-				61338CE121972914001978A5 /* StringWriter.swift */,
 				35530CF7212ABF5F00A173D6 /* ViewController.swift */,
-				35C3C57D219588AE0090482B /* WriteStrategy.swift */,
-				35C3C57F2195894D0090482B /* ColumnNameWrapper.swift */,
 			);
 			path = QuitSmoking;
 			sourceTree = "<group>";
@@ -353,15 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61338CE221972914001978A5 /* StringWriter.swift in Sources */,
 				35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */,
-				35C3C57E219588AE0090482B /* WriteStrategy.swift in Sources */,
 				35530CF8212ABF5F00A173D6 /* ViewController.swift in Sources */,
-				35C3C5802195894D0090482B /* ColumnNameWrapper.swift in Sources */,
 				357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */,
 				35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */,
 				35FF4D18219180A700EB65D6 /* DatabaseHandler.swift in Sources */,
-				35FF4D1B2191ABD200EB65D6 /* Int64Writer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

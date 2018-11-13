@@ -155,7 +155,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Bestätigen"/>
                                 <connections>
-                                    <action selector="onSubmitClick" destination="TnP-e2-hGv" eventType="touchUpInside" id="jfb-MM-iom"/>
+                                    <action selector="onSubmitTap" destination="TnP-e2-hGv" eventType="touchUpInside" id="jfb-MM-iom"/>
                                 </connections>
                             </button>
                         </subviews>
