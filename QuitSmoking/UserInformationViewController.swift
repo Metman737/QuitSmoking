@@ -1,11 +1,3 @@
-//
-//  UserInformationViewController.swift
-//  QuitSmoking
-//
-//  Created by Leon Burmeister on 05.11.18.
-//  Copyright © 2018 DreamTeam. All rights reserved.
-//
-
 import UIKit
 import SQLite
 
@@ -20,7 +12,8 @@ class UserInformationViewController: UIViewController {
     
     //Geburtstag
     @IBOutlet weak var birthdayLabel: UILabel!
-    @IBOutlet weak var birthdayTextField: UITextField!
+    //@IBOutlet weak var birthdayTextField: UITextField!
+    @IBOutlet weak var BirthdayDatePicker: UIDatePicker!
     
     //Gewicht in Kg
     @IBOutlet weak var weightLabel: UILabel!
@@ -42,26 +35,15 @@ class UserInformationViewController: UIViewController {
     
     let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db"
     let tableName = "User"
-    let columnNames: [String] = ["id", "Geburtstdatum", "Name", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
+    let columnNames: [String] = ["Name", "Geburtstdatum", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
     let uiTextFieldStartValues: [String] = ["Name", "Geburtsdatum", "Anfangsjahr", "Durchschnitt"]
     
     @IBAction func onSubmitTap() {
-        let dbHandler = DatabaseHandler()
-        dbHandler.writeStringToDatabase()
-        /**
-        if areTextFieldsFilled(){
-            let writeStrategy = StringWriter()
-            let columnNameWrapper = ColumnNameWrapper()
-            columnNameWrapper.writeStringExpr = Expression<String>("Name")
-            do{
-                try
-                    writeStrategy.writeToDatabase(databaseConnection: Connection(tablePath), tableName: tableName, columnKey: columnNameWrapper, value: nameTextField.text!)
-                 }
-                catch{
-                    fatalError("Can not connect to database")
-            }
+        let valueDictionary: [String: String] = getValueDictionary()
+        if arePreconditionsFulfilled(valueArray: valueDictionary){
+            let userTableHandler = UserTableHandler()
+            userTableHandler.writeToTable(valueDictionary: valueDictionary)
         }
- **/
     }
     
     override func viewDidLoad() {
@@ -73,20 +55,50 @@ class UserInformationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func getValueDictionary() -> [String: String] {
+        let uiTextFields = getUITextFields()
+        var resultDictionary: [String: String] = [:]
+        for (index, columnName) in columnNames.enumerated(){
+            resultDictionary[columnName] = uiTextFields[index].text ?? ""
+        }
+        return resultDictionary
+    }
+    
     private func getUITextFields() -> [UITextField]{
-        let uiTextFields: [UITextField] = [nameTextField, birthdayTextField, weightTextField, startYearTextField, averageTextFIeld]
+        let uiTextFields: [UITextField] = [nameTextField, birthdayTextField, weightTextField, startYearTextField, averageTextFIeld, priceTextField]
         return uiTextFields
     }
     
-    private func areTextFieldsFilled() -> Bool{
-        for uiTextField in getUITextFields() {
-            if uiTextField.text!.isEmpty || uiTextFieldStartValues.contains(uiTextField.text!){
-                return false
-            }
+    private func arePreconditionsFulfilled(valueArray: [String: String]) -> Bool{
+        if checkRequiredFields(valueArray: valueArray).isEmpty{
+                return true
         }
-        return true
+        return false
     }
     
-    
+    private func checkRequiredFields(valueArray: [String: String]) -> [String]{
+        var resultKeys: [String] = []
+        let requiredFieldKeys: [String] = ["Name", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
+        for requiredFieldKey in requiredFieldKeys{
+            if valueArray[requiredFieldKey] == "" {
+                resultKeys.append(requiredFieldKey)
+            }
+        }
+        return resultKeys
+    }
+
+    /**
+    private func checkFormatting(valueArray: [String: String]) -> [String]{
+        var resultKeys: [String]
+        for key in valueArray.keys {
+            switch (key){
+                case ""
+            }
+            
+        }
+  
+        return true
+    }
+     **/
 }
 
