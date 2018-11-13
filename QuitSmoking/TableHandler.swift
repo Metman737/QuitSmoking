@@ -1,3 +1,5 @@
+import SQLite
+
 protocol TableHandler {
     
     func writeToTable(valueDictionary: [String: String])
