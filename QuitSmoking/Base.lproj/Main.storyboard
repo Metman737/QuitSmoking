@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TnP-e2-hGv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,11 +15,11 @@
         <scene sceneID="Bms-qi-FH8">
             <objects>
                 <viewController storyboardIdentifier="myStoryBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TnP-e2-hGv" customClass="UserInformationViewController" customModule="QuitSmoking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="wN9-6b-nfQ">
+                    <view key="view" contentMode="scaleToFill" id="wN9-6b-nfQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1jo-aU-Vkl">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1jo-aU-Vkl">
                                 <rect key="frame" x="10" y="174" width="300" height="220"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="oBZ-bb-MOm">
@@ -127,49 +127,76 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="t6J-ob-sJN" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="7Hb-sN-Zzs"/>
-                                    <constraint firstAttribute="width" constant="300" id="90N-ot-UdW"/>
-                                    <constraint firstItem="oBZ-bb-MOm" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="D9n-jh-Mvi"/>
-                                    <constraint firstItem="LAx-oO-gaP" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="VDC-Cg-eXt"/>
-                                    <constraint firstItem="bBc-mF-Y9V" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="gsJ-3L-KFR"/>
-                                    <constraint firstItem="xEo-uL-f0g" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="sWT-9L-TST"/>
-                                    <constraint firstItem="5GO-ae-tof" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="xz3-7u-HEO"/>
+                                    <constraint firstAttribute="trailing" secondItem="xEo-uL-f0g" secondAttribute="trailing" id="1Cm-uZ-2TW"/>
+                                    <constraint firstItem="LAx-oO-gaP" firstAttribute="leading" secondItem="1jo-aU-Vkl" secondAttribute="leading" id="D1B-h5-twA"/>
+                                    <constraint firstAttribute="trailing" secondItem="bBc-mF-Y9V" secondAttribute="trailing" id="F8Q-FV-PEd"/>
+                                    <constraint firstItem="t6J-ob-sJN" firstAttribute="leading" secondItem="1jo-aU-Vkl" secondAttribute="leading" id="HaJ-U7-ui5"/>
+                                    <constraint firstAttribute="trailing" secondItem="t6J-ob-sJN" secondAttribute="trailing" id="Jaz-OB-xVb"/>
+                                    <constraint firstItem="bBc-mF-Y9V" firstAttribute="leading" secondItem="1jo-aU-Vkl" secondAttribute="leading" id="MOT-9B-e7s"/>
+                                    <constraint firstItem="oBZ-bb-MOm" firstAttribute="leading" secondItem="1jo-aU-Vkl" secondAttribute="leading" id="T7E-r4-y87"/>
+                                    <constraint firstAttribute="trailing" secondItem="oBZ-bb-MOm" secondAttribute="trailing" id="ZBY-n7-qlN"/>
+                                    <constraint firstItem="5GO-ae-tof" firstAttribute="leading" secondItem="1jo-aU-Vkl" secondAttribute="leading" id="ZuD-Lw-Ivk"/>
+                                    <constraint firstItem="xEo-uL-f0g" firstAttribute="leading" secondItem="1jo-aU-Vkl" secondAttribute="leading" id="jNe-Iu-qBs"/>
+                                    <constraint firstAttribute="trailing" secondItem="LAx-oO-gaP" secondAttribute="trailing" id="lB9-34-foI"/>
+                                    <constraint firstAttribute="trailing" secondItem="5GO-ae-tof" secondAttribute="trailing" id="zIa-7l-oZZ"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMK-bi-sAJ">
-                                <rect key="frame" x="117" y="425" width="87" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="3ul-tf-tjI"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="87" id="pIQ-I8-E2A"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMK-bi-sAJ">
+                                <rect key="frame" x="117" y="425" width="86" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Bestätigen"/>
                                 <connections>
                                     <action selector="onSubmitTap" destination="TnP-e2-hGv" eventType="touchUpInside" id="jfb-MM-iom"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" customClass="SegueFromLeft" customModule="QuitSmoking" customModuleProvider="target" id="cbx-KT-gcD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfX-zV-bRV">
-                                <rect key="frame" x="104" y="51" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr0-Nw-jSs">
+                                <rect key="frame" x="10" y="35" width="23" height="26"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="4kk-A4-dZd"/>
-                                    <constraint firstAttribute="height" constant="100" id="NBn-Jt-09H"/>
+                                    <constraint firstAttribute="height" constant="26" id="r7D-io-Hpp"/>
                                 </constraints>
-                                <state key="normal" image="AddCigarrette"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <state key="normal" image="BackImage"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" customClass="SegueFromLeft" customModule="QuitSmoking" customModuleProvider="target" id="wTu-mZ-hHv"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaV-cn-iU6">
+                                <rect key="frame" x="29" y="38" width="38" height="20"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserImage" translatesAutoresizingMaskIntoConstraints="NO" id="iwn-0P-pO7">
+                                <rect key="frame" x="124" y="86" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Q5D-l3-TtH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="top" secondItem="1jo-aU-Vkl" secondAttribute="bottom" constant="86" id="7Df-3f-2CS"/>
-                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="163.66999999999999" id="8r7-1A-D6U"/>
-                            <constraint firstItem="hfX-zV-bRV" firstAttribute="centerX" secondItem="wN9-6b-nfQ" secondAttribute="centerX" id="CSG-W3-vvs"/>
-                            <constraint firstItem="1jo-aU-Vkl" firstAttribute="centerY" secondItem="wN9-6b-nfQ" secondAttribute="centerY" id="Nlp-lc-kxl"/>
-                            <constraint firstItem="1jo-aU-Vkl" firstAttribute="centerX" secondItem="wN9-6b-nfQ" secondAttribute="centerX" id="aH6-u8-NiW"/>
-                            <constraint firstItem="P1J-te-67r" firstAttribute="bottom" secondItem="VMK-bi-sAJ" secondAttribute="bottom" constant="184" id="mVO-JY-z8d"/>
-                            <constraint firstItem="1jo-aU-Vkl" firstAttribute="top" secondItem="hfX-zV-bRV" secondAttribute="bottom" constant="21" id="tFX-eD-jaK" userLabel="Stack View.top = Button.bottom + 30"/>
-                            <constraint firstItem="P1J-te-67r" firstAttribute="trailing" secondItem="VMK-bi-sAJ" secondAttribute="trailing" constant="163.33000000000001" id="tHE-SC-o86"/>
+                            <constraint firstItem="iwn-0P-pO7" firstAttribute="top" secondItem="P1J-te-67r" secondAttribute="top" constant="66" id="27t-cq-SBT"/>
+                            <constraint firstItem="P1J-te-67r" firstAttribute="trailing" secondItem="Qr0-Nw-jSs" secondAttribute="trailing" constant="287" id="4Vn-90-P6i"/>
+                            <constraint firstItem="Qr0-Nw-jSs" firstAttribute="centerY" secondItem="TaV-cn-iU6" secondAttribute="centerY" id="BFD-hI-cDB"/>
+                            <constraint firstItem="TaV-cn-iU6" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="29" id="ID3-Nt-D0V"/>
+                            <constraint firstItem="Qr0-Nw-jSs" firstAttribute="leading" secondItem="1jo-aU-Vkl" secondAttribute="leading" id="IyO-N7-V93"/>
+                            <constraint firstItem="iwn-0P-pO7" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="Kf8-K2-re8"/>
+                            <constraint firstItem="TaV-cn-iU6" firstAttribute="top" secondItem="P1J-te-67r" secondAttribute="top" constant="18" id="Kxq-Dk-2rX"/>
+                            <constraint firstItem="iwn-0P-pO7" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="124" id="SJo-rG-bOs"/>
+                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="117" id="VFY-LO-MEE"/>
+                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="top" secondItem="1jo-aU-Vkl" secondAttribute="bottom" constant="31" id="a7D-Di-yWc"/>
+                            <constraint firstItem="Qr0-Nw-jSs" firstAttribute="top" secondItem="P1J-te-67r" secondAttribute="top" constant="15" id="c3N-dG-sW3"/>
+                            <constraint firstItem="P1J-te-67r" firstAttribute="bottom" secondItem="VMK-bi-sAJ" secondAttribute="bottom" constant="109" id="kVE-pv-12p"/>
+                            <constraint firstItem="P1J-te-67r" firstAttribute="trailing" secondItem="1jo-aU-Vkl" secondAttribute="trailing" constant="10" id="lJ5-Bg-RxA"/>
+                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="oL3-wo-IGY"/>
+                            <constraint firstItem="1jo-aU-Vkl" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="10" id="w8k-ZB-gDf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P1J-te-67r"/>
                     </view>
@@ -191,12 +218,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQo-lM-vZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702.89855072463774" y="18.75"/>
+            <point key="canvasLocation" x="-251.25" y="-54.929577464788736"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuitSmoking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="QuitSmoking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,21 +259,45 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAz-9R-QKu">
+                                <rect key="frame" x="269" y="35" width="35" height="35"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <state key="normal" image="UserSettingsImage"/>
+                                <connections>
+                                    <segue destination="TnP-e2-hGv" kind="show" customClass="SegueFromRight" customModule="QuitSmoking" customModuleProvider="target" id="2Bv-cq-qVp"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.41500976270000001" blue="0.96415176329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6iE-a6-HcF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="666-44-QCu"/>
                             <constraint firstItem="6iE-a6-HcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TFw-zb-fLN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vAz-9R-QKu" secondAttribute="bottom" constant="498" id="TvN-tW-Wr7"/>
+                            <constraint firstItem="vAz-9R-QKu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Yfl-R4-8zh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vAz-9R-QKu" secondAttribute="trailing" constant="16" id="fV9-oq-B2n"/>
+                            <constraint firstItem="vAz-9R-QKu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="253" id="iBb-ew-WcF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="settings" destination="vAz-9R-QKu" id="fMN-OV-dUF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-1249" y="-55"/>
         </scene>
     </scenes>
     <resources>
         <image name="AddCigarrette" width="512" height="512"/>
+        <image name="BackImage" width="75" height="75"/>
+        <image name="UserImage" width="78" height="78"/>
+        <image name="UserSettingsImage" width="75" height="75"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wTu-mZ-hHv"/>
+    </inferredMetricsTieBreakers>
 </document>
