@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A620D2919B6ECCD374CDB28 /* Pods_QuitSmokingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9AAEDE5D9A545CC4415672 /* Pods_QuitSmokingTests.framework */; };
 		35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530CF5212ABF5F00A173D6 /* AppDelegate.swift */; };
-		35530CF8212ABF5F00A173D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530CF7212ABF5F00A173D6 /* ViewController.swift */; };
+		35530CF8212ABF5F00A173D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530CF7212ABF5F00A173D6 /* MainViewController.swift */; };
 		35530CFB212ABF5F00A173D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530CF9212ABF5F00A173D6 /* Main.storyboard */; };
 		35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */; };
 		35530D00212ABF6000A173D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35530CFF212ABF6000A173D6 /* Assets.xcassets */; };
@@ -48,7 +48,7 @@
 		19191AA4FD056F39B8E11999 /* Pods-QuitSmokingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTests/Pods-QuitSmokingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		35530CF2212ABF5F00A173D6 /* QuitSmoking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmoking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35530CF5212ABF5F00A173D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35530CF7212ABF5F00A173D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35530CF7212ABF5F00A173D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		35530CFA212ABF5F00A173D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35530CFD212ABF5F00A173D6 /* QuitSmoking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuitSmoking.xcdatamodel; sourceTree = "<group>"; };
 		35530CFF212ABF6000A173D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 				35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */,
 				357543D6219062D400C0BC68 /* UserInformationViewController.swift */,
 				35FF4D17219180A700EB65D6 /* TableHandler.swift */,
-				35530CF7212ABF5F00A173D6 /* ViewController.swift */,
+				35530CF7212ABF5F00A173D6 /* MainViewController.swift */,
 				3560614C219AD68800E7CBA3 /* CigarettesTableWriter.swift */,
 				357ACC12219ADE9700BCB73F /* UserTableHandler.swift */,
 				35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */,
@@ -438,7 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */,
-				35530CF8212ABF5F00A173D6 /* ViewController.swift in Sources */,
+				35530CF8212ABF5F00A173D6 /* MainViewController.swift in Sources */,
 				3560614D219AD68800E7CBA3 /* CigarettesTableWriter.swift in Sources */,
 				357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */,
 				35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */,
