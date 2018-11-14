@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import QuitSmoking
 
 class QuitSmokingUITests: XCTestCase {
         
@@ -33,4 +34,45 @@ class QuitSmokingUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testAddButtonClicked(){
+        // Button test
+        
+        let app = XCUIApplication()
+        
+        app.buttons["AddCigarrette"].tap()
+        app.staticTexts["Add Cigarette"].tap()
+        
+        XCTAssertEqual(app.buttons["AddCigarrette"].index(ofAccessibilityElement: 1), app.buttons["AddCigarrette"].index(ofAccessibilityElement: 1))
+        
+        
+    }
+    
+    func testSubmitButton(){
+        
+        let app = XCUIApplication()
+        let textField = app.textFields["Name"]
+        
+        //testet ob Textfield existiert
+        XCTAssertTrue(textField.exists, "Text field doesn't exist")
+        
+        app.buttons["Bestätigen"].tap()
+        
+        //Checkt den Wert des Textfields
+        XCTAssertEqual(textField.value as! String, "Joey und Leon", "Text field value is not correct")
+
+    }
+    
+    func testTextfields() {
+        
+        let app = XCUIApplication()
+        app.textFields["Name"].tap()
+        
+        let element = app.otherElements.containing(.button, identifier:"AddCigarrette").children(matching: .other).element
+        let textField = element.children(matching: .other).element(boundBy: 1).children(matching: .textField).element
+        
+        textField.tap()
+        textField.tap()
+        element.children(matching: .other).element(boundBy: 2).children(matching: .textField).element.tap()
+        
+    }
 }

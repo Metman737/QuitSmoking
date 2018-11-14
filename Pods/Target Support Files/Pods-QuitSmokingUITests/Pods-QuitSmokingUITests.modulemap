@@ -1,0 +1,6 @@
+framework module Pods_QuitSmokingUITests {
+  umbrella header "Pods-QuitSmokingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
