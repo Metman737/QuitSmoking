@@ -151,6 +151,7 @@
                                 <state key="normal" title="Bestätigen"/>
                                 <connections>
                                     <action selector="onSubmitTap" destination="TnP-e2-hGv" eventType="touchUpInside" id="jfb-MM-iom"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" customClass="SegueFromRight" customModule="QuitSmoking" customModuleProvider="target" id="cbx-KT-gcD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfX-zV-bRV">
@@ -236,6 +237,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAz-9R-QKu">
+                                <rect key="frame" x="137" y="65" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="TnP-e2-hGv" kind="show" customClass="SegueFromLeft" customModule="QuitSmoking" customModuleProvider="target" id="2Bv-cq-qVp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.41500976270000001" blue="0.96415176329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

@@ -19,6 +19,8 @@
 		3560614D219AD68800E7CBA3 /* CigarettesTableWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560614C219AD68800E7CBA3 /* CigarettesTableWriter.swift */; };
 		357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357543D6219062D400C0BC68 /* UserInformationViewController.swift */; };
 		357ACC13219ADE9700BCB73F /* UserTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357ACC12219ADE9700BCB73F /* UserTableHandler.swift */; };
+		35BCD7F9219C475B00FEC81A /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */; };
+		35BCD7FB219C482C00FEC81A /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BCD7FA219C482C00FEC81A /* SegueFromRight.swift */; };
 		35FF4D18219180A700EB65D6 /* TableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF4D17219180A700EB65D6 /* TableHandler.swift */; };
 		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; };
 		95FB7B562F992B554139B10F /* Pods_QuitSmokingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C1FA23064E8F3C7A6F8EB2 /* Pods_QuitSmokingUITests.framework */; };
@@ -61,6 +63,8 @@
 		3560614C219AD68800E7CBA3 /* CigarettesTableWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarettesTableWriter.swift; sourceTree = "<group>"; };
 		357543D6219062D400C0BC68 /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
 		357ACC12219ADE9700BCB73F /* UserTableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableHandler.swift; sourceTree = "<group>"; };
+		35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
+		35BCD7FA219C482C00FEC81A /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		35FF4D17219180A700EB65D6 /* TableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHandler.swift; sourceTree = "<group>"; };
 		9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.release.xcconfig"; sourceTree = "<group>"; };
 		92493D9E366FE965DCFFDCC6 /* Pods-QuitSmokingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingUITests/Pods-QuitSmokingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				35530CF7212ABF5F00A173D6 /* ViewController.swift */,
 				3560614C219AD68800E7CBA3 /* CigarettesTableWriter.swift */,
 				357ACC12219ADE9700BCB73F /* UserTableHandler.swift */,
+				35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */,
+				35BCD7FA219C482C00FEC81A /* SegueFromRight.swift */,
 			);
 			path = QuitSmoking;
 			sourceTree = "<group>";
@@ -437,7 +443,9 @@
 				357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */,
 				35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */,
 				357ACC13219ADE9700BCB73F /* UserTableHandler.swift in Sources */,
+				35BCD7F9219C475B00FEC81A /* SegueFromLeft.swift in Sources */,
 				35FF4D18219180A700EB65D6 /* TableHandler.swift in Sources */,
+				35BCD7FB219C482C00FEC81A /* SegueFromRight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
