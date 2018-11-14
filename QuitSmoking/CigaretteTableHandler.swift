@@ -13,8 +13,8 @@ class CigaretteTableHandler: TableHandler {
     let cigarettes: Table = Table("Zigaretten")
     init(){
         //Datenbankkommunikation aufbauen
-        let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
-        //let tablePath = "/Volumes/Extreme 900/Project 05/QuitSmoking/Database/cigarettes.db"
+        //let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+        let tablePath = "/Volumes/Extreme 900/Project 05/QuitSmoking/Database/cigarettes.db"
         do{db = try Connection(tablePath)
         } catch { fatalError("Cannot connect to database")}
     }
@@ -27,10 +27,10 @@ class CigaretteTableHandler: TableHandler {
             fatalError("Failed to write into Table: Zigarettes")
         }
     }
-    
-    func readFromTable(columnKeys: [String], ID: Expression<Int64>) -> [String: String]  {
+
+    func getRowFromTable(columnKeys: [String], identificators: [Expressible]) -> [String: String]  {
         let columnKeyExpressions: [Expressible] = getColumnKeyExpressions(columnKeys: columnKeys)
-        let query = cigarettes.select(columnKeyExpressions).where(userID == ID)
+        let query = cigarettes.select(columnKeyExpressions).where(datum == Expression<String>(getStandardString(expression: identificators[0])) && uhrzeit == Expression<String>(getStandardString(expression: identificators[1])))
         var returnDictionary: [String: String] = [:]
         do{
             for cigaretteRow in try db.prepare(query){
@@ -54,6 +54,10 @@ class CigaretteTableHandler: TableHandler {
         }
     }
     
+    private func getStandardString(expression: Expressible) -> String{
+       return expression.expression.template.trimmingCharacters(in: CharacterSet.init(charactersIn: " \""))
+    }
+    
     private func getColumnKeyExpressions(columnKeys: [String]) -> [Expressible]{
         var columnKeyExpressions: [Expressible] = []
         for columnKey in columnKeys{
@@ -68,5 +72,4 @@ class CigaretteTableHandler: TableHandler {
         }
         return columnKeyExpressions
     }
-    
 }

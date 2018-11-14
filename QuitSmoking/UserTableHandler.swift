@@ -17,7 +17,8 @@ class UserTableHandler: TableHandler {
     let user: Table = Table("User")
     init(){
         //Datenbankkommunikation aufbauen
-        let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+        let tablePath = "/Volumes/Extreme 900/Project 05/QuitSmoking/Database/cigarettes.db"
+        //let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
         do{db = try Connection(tablePath)
         } catch { fatalError("Cannot connect to database")}
     }
@@ -30,14 +31,14 @@ class UserTableHandler: TableHandler {
             fatalError("Failed to write into Table: User")
         }
     }
-    
-    func readFromTable(columnKeys: [String], ID: Expression<Int64>) -> [String: String] {
+
+    func getRowFromTable(columnKeys: [String], identificators: [Expressible]) -> [String: String] {
         let columnKeyExpressions: [Expressible] = getColumKeyExpressions(columnKeys: columnKeys)
-        let query = user.select(columnKeyExpressions).where(userID == ID)
+        let query = user.select(columnKeyExpressions).where(userID == Expression<Int64>(getStandardString(expression: identificators[0])))
         var returnDictionary: [String: String] = [:]
         do{
             for userRow in try db.prepare(query){
-                for columnKey in columnKeys{
+                for columnKey in columnKeys {
                     switch(columnKey){
                     case "id":
                         returnDictionary["id"] = "\(userRow[userID])"
@@ -55,15 +56,20 @@ class UserTableHandler: TableHandler {
                         returnDictionary["Raucheranfangsjahr"] = "\(userRow[userID])"
                     default:
                         fatalError("Not able to retrieve RowData for the following: " + columnKey)
+                            }
                         }
                     }
+                    return returnDictionary
                 }
-            return returnDictionary
-            }
         catch{
             fatalError("Not able to read from table.")
         }
     
+    }
+    
+    private func getStandardString(expression: Expressible) -> String{
+        let returnString: String = expression.expression.template.trimmingCharacters(in: CharacterSet.init(charactersIn: " \""))
+        return returnString
     }
     
     private func getColumKeyExpressions(columnKeys: [String]) -> [Expressible]{

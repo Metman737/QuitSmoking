@@ -41,9 +41,9 @@ class UserInformationViewController: UIViewController {
         if arePreconditionsFulfilled(valueArray: valueDictionary){
             let userTableHandler = UserTableHandler()
             userTableHandler.writeToTable(valueDictionary: valueDictionary)
-            for row in userTableHandler.readFromTable(columnKeys: columnNames, ID: Expression<Int64>("2")){
+            /*for row in userTableHandler.readFromTable(columnKeys: columnNames, ID: Expression<Int64>("2")){
                 print (row)
-            }
+            }*/
         }
     }
     
