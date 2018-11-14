@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TnP-e2-hGv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -142,38 +142,60 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMK-bi-sAJ">
-                                <rect key="frame" x="116.5" y="425" width="87" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="87" id="2ys-GF-PBp"/>
-                                    <constraint firstAttribute="height" constant="34" id="3ul-tf-tjI"/>
-                                </constraints>
+                                <rect key="frame" x="117" y="425" width="86" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Bestätigen"/>
                                 <connections>
                                     <action selector="onSubmitTap" destination="TnP-e2-hGv" eventType="touchUpInside" id="jfb-MM-iom"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" customClass="SegueFromRight" customModule="QuitSmoking" customModuleProvider="target" id="cbx-KT-gcD"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" customClass="SegueFromLeft" customModule="QuitSmoking" customModuleProvider="target" id="cbx-KT-gcD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfX-zV-bRV">
-                                <rect key="frame" x="110" y="52" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr0-Nw-jSs">
+                                <rect key="frame" x="10" y="35" width="23" height="26"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="A8J-FX-81H"/>
-                                    <constraint firstAttribute="width" constant="100" id="zJp-54-UEf"/>
+                                    <constraint firstAttribute="height" constant="26" id="r7D-io-Hpp"/>
                                 </constraints>
-                                <state key="normal" image="AddCigarrette"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <state key="normal" image="BackImage"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" customClass="SegueFromLeft" customModule="QuitSmoking" customModuleProvider="target" id="wTu-mZ-hHv"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaV-cn-iU6">
+                                <rect key="frame" x="29" y="38" width="38" height="20"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserImage" translatesAutoresizingMaskIntoConstraints="NO" id="iwn-0P-pO7">
+                                <rect key="frame" x="124" y="86" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Q5D-l3-TtH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hfX-zV-bRV" firstAttribute="centerX" secondItem="wN9-6b-nfQ" secondAttribute="centerX" id="4I5-jH-gtd"/>
-                            <constraint firstItem="hfX-zV-bRV" firstAttribute="top" secondItem="P1J-te-67r" secondAttribute="top" constant="32" id="MA8-7h-TrN"/>
-                            <constraint firstItem="1jo-aU-Vkl" firstAttribute="top" secondItem="hfX-zV-bRV" secondAttribute="bottom" constant="22" id="ZL4-kf-I7F"/>
+                            <constraint firstItem="iwn-0P-pO7" firstAttribute="top" secondItem="P1J-te-67r" secondAttribute="top" constant="66" id="27t-cq-SBT"/>
+                            <constraint firstItem="P1J-te-67r" firstAttribute="trailing" secondItem="Qr0-Nw-jSs" secondAttribute="trailing" constant="287" id="4Vn-90-P6i"/>
+                            <constraint firstItem="Qr0-Nw-jSs" firstAttribute="centerY" secondItem="TaV-cn-iU6" secondAttribute="centerY" id="BFD-hI-cDB"/>
+                            <constraint firstItem="TaV-cn-iU6" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="29" id="ID3-Nt-D0V"/>
+                            <constraint firstItem="Qr0-Nw-jSs" firstAttribute="leading" secondItem="1jo-aU-Vkl" secondAttribute="leading" id="IyO-N7-V93"/>
+                            <constraint firstItem="iwn-0P-pO7" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="Kf8-K2-re8"/>
+                            <constraint firstItem="TaV-cn-iU6" firstAttribute="top" secondItem="P1J-te-67r" secondAttribute="top" constant="18" id="Kxq-Dk-2rX"/>
+                            <constraint firstItem="iwn-0P-pO7" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="124" id="SJo-rG-bOs"/>
+                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="117" id="VFY-LO-MEE"/>
+                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="top" secondItem="1jo-aU-Vkl" secondAttribute="bottom" constant="31" id="a7D-Di-yWc"/>
+                            <constraint firstItem="Qr0-Nw-jSs" firstAttribute="top" secondItem="P1J-te-67r" secondAttribute="top" constant="15" id="c3N-dG-sW3"/>
+                            <constraint firstItem="P1J-te-67r" firstAttribute="bottom" secondItem="VMK-bi-sAJ" secondAttribute="bottom" constant="109" id="kVE-pv-12p"/>
                             <constraint firstItem="P1J-te-67r" firstAttribute="trailing" secondItem="1jo-aU-Vkl" secondAttribute="trailing" constant="10" id="lJ5-Bg-RxA"/>
-                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="centerX" secondItem="wN9-6b-nfQ" secondAttribute="centerX" id="oHO-eM-Ujb"/>
-                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="top" secondItem="1jo-aU-Vkl" secondAttribute="bottom" constant="31" id="vM4-k9-HP3"/>
+                            <constraint firstItem="VMK-bi-sAJ" firstAttribute="centerX" secondItem="1jo-aU-Vkl" secondAttribute="centerX" id="oL3-wo-IGY"/>
                             <constraint firstItem="1jo-aU-Vkl" firstAttribute="leading" secondItem="P1J-te-67r" secondAttribute="leading" constant="10" id="w8k-ZB-gDf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P1J-te-67r"/>
@@ -196,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQo-lM-vZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-703.125" y="17.95774647887324"/>
+            <point key="canvasLocation" x="-251.25" y="-54.929577464788736"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -237,28 +259,26 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAz-9R-QKu">
-                                <rect key="frame" x="16" y="20" width="34" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="...">
-                                            <attributes>
-                                                <font key="NSFont" size="28" name=".AppleSystemUIFont"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAz-9R-QKu">
+                                <rect key="frame" x="269" y="35" width="35" height="35"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <state key="normal" image="UserSettingsImage"/>
                                 <connections>
-                                    <segue destination="TnP-e2-hGv" kind="show" customClass="SegueFromLeft" customModule="QuitSmoking" customModuleProvider="target" id="2Bv-cq-qVp"/>
+                                    <segue destination="TnP-e2-hGv" kind="show" customClass="SegueFromRight" customModule="QuitSmoking" customModuleProvider="target" id="2Bv-cq-qVp"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.41500976270000001" blue="0.96415176329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6iE-a6-HcF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="666-44-QCu"/>
                             <constraint firstItem="6iE-a6-HcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TFw-zb-fLN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vAz-9R-QKu" secondAttribute="bottom" constant="498" id="TvN-tW-Wr7"/>
+                            <constraint firstItem="vAz-9R-QKu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Yfl-R4-8zh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vAz-9R-QKu" secondAttribute="trailing" constant="16" id="fV9-oq-B2n"/>
+                            <constraint firstItem="vAz-9R-QKu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="253" id="iBb-ew-WcF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -268,10 +288,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.875" y="20.070422535211268"/>
+            <point key="canvasLocation" x="-1249" y="-55"/>
         </scene>
     </scenes>
     <resources>
         <image name="AddCigarrette" width="512" height="512"/>
+        <image name="BackImage" width="75" height="75"/>
+        <image name="UserImage" width="78" height="78"/>
+        <image name="UserSettingsImage" width="75" height="75"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wTu-mZ-hHv"/>
+    </inferredMetricsTieBreakers>
 </document>
