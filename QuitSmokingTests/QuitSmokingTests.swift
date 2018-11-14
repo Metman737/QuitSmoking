@@ -8,6 +8,7 @@
 
 import XCTest
 import SQLite
+import Foundation
 @testable import QuitSmoking
 
 class QuitSmokingTests: XCTestCase {
@@ -31,12 +32,20 @@ class QuitSmokingTests: XCTestCase {
     func testReadFromDatabase(){
         let columns: [String] = ["Datum", "Uhrzeit"]
         var keys: [Expressible] = []
-        keys.append(Expression<String>("22.10.2018"))
+        
+        let todayDate = Date().asSQL().trimmingCharacters(in: CharacterSet.init(charactersIn: "\'"))
+        let startDate = Date(timeIntervalSince1970: 0).asSQL().trimmingCharacters(in: CharacterSet.init(charactersIn: "\'"))
+        
+        keys.append(Expression<String>(todayDate))
         keys.append(Expression<String>("22:30"))
         let cigaretteTableHandler: CigaretteTableHandler = CigaretteTableHandler()
+        
+        //cigaretteTableHandler.getRowsOfDay(date: "10-22-2018")
+        cigaretteTableHandler.getRowsOfDateSpan(startDate: startDate, endDate: todayDate)
+        
         let results: [String: String] = cigaretteTableHandler.getRowFromTable(columnKeys: columns, identificators: keys)
         XCTAssertEqual(results["Uhrzeit"], "22:30")
-        XCTAssertEqual(results["Datum"], "22.10.2018")
+        XCTAssertEqual(results["Datum"], todayDate)
     }
     
     func testWriteAndRead(){
@@ -45,16 +54,16 @@ class QuitSmokingTests: XCTestCase {
         let columns: [String] = ["Datum", "Uhrzeit"]
         var keys: [Expressible] = []
         
-        keys.append(Expression<String>("23.11.2017"))
+        keys.append(Expression<String>("11-23-2017"))
         keys.append(Expression<String>("18:00"))
         
-        let writeArray = ["Datum":"23.11.2017","Uhrzeit":"18:00","UserID":"2"]
+        let writeArray = ["Datum":"11-23-2017","Uhrzeit":"18:00","UserID":"2"]
         cigaretteTableHandler.writeToTable(valueDictionary: writeArray)
         
         let results: [String: String] = cigaretteTableHandler.getRowFromTable(columnKeys: columns, identificators: keys)
         
         XCTAssertEqual(results["Uhrzeit"], "18:00")
-        XCTAssertEqual(results["Datum"], "23.11.2017")
+        XCTAssertEqual(results["Datum"], "11-23-2017")
         
     }
     
