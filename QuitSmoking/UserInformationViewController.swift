@@ -32,16 +32,18 @@ class UserInformationViewController: UIViewController {
 
     @IBOutlet weak var submitButton: UIButton!
     
-    
-    let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db"
-    let tableName = "User"
     let columnNames: [String] = ["Name", "Geburtstdatum", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
+    
+    //MARK: Aktions
     
     @IBAction func onSubmitTap() {
         let valueDictionary: [String: String] = getValueDictionary()
         if arePreconditionsFulfilled(valueArray: valueDictionary){
             let userTableHandler = UserTableHandler()
             userTableHandler.writeToTable(valueDictionary: valueDictionary)
+            /*for row in userTableHandler.readFromTable(columnKeys: columnNames, ID: Expression<Int64>("2")){
+                print (row)
+            }*/
         }
     }
     
@@ -50,10 +52,17 @@ class UserInformationViewController: UIViewController {
     override func viewDidLoad() {
         
         //Datapicker
-        let datapicker = UIDatePicker()
-        datapicker.datePickerMode = UIDatePicker.Mode.date
-        datapicker.addTarget(self, action: #selector(UserInformationViewController.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
-        birthdayTextField.inputView = datapicker
+        let datepickerBirthday = UIDatePicker()
+        let datepickerStartYear = UIDatePicker()
+        
+        datepickerBirthday.datePickerMode = UIDatePicker.Mode.date
+        datepickerStartYear.datePickerMode = UIDatePicker.Mode.date
+        
+        datepickerBirthday.addTarget(self, action: #selector(self.datePickerValueChangedBirthday(sender:)), for: UIControl.Event.valueChanged)
+        datepickerStartYear.addTarget(self, action: #selector(self.datePickerValueChangedStartYear(sender:)), for: UIControl.Event.valueChanged)
+        
+        birthdayTextField.inputView = datepickerBirthday
+        startYearTextField.inputView = datepickerStartYear
         
         super.viewDidLoad()  
     }
@@ -70,12 +79,21 @@ class UserInformationViewController: UIViewController {
     //MARK: Functions
     
     //Datapicker Funktion
-    @objc func datePickerValueChanged(sender: UIDatePicker){
+    @objc func datePickerValueChangedBirthday(sender: UIDatePicker){
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
         formatter.timeStyle = DateFormatter.Style.none
         birthdayTextField.text = formatter.string(from: sender.date)
     }
+    
+    @objc func datePickerValueChangedStartYear(sender: UIDatePicker){
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        formatter.timeStyle = DateFormatter.Style.none
+        startYearTextField.text = formatter.string(from: sender.date)
+    }
+    
+    
     
     private func getValueDictionary() -> [String: String] {
         let uiTextFields = getUITextFields()

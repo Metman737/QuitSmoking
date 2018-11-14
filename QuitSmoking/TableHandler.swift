@@ -3,7 +3,7 @@ import SQLite
 protocol TableHandler {
     
     func writeToTable(valueDictionary: [String: String])
-    func readFromTable(columnKeys: [String], ID: Expression<Int64>) -> [String: String]
+    func getRowFromTable(columnKeys: [String], identificators: [Expressible]) -> [String: String]
     
 }
 

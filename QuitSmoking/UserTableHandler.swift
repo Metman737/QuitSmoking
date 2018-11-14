@@ -17,7 +17,11 @@ class UserTableHandler: TableHandler {
     let user: Table = Table("User")
     init(){
         //Datenbankkommunikation aufbauen
-        do{db = try Connection("/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db")
+        //let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+        //let tablePath = "(application_home)/Library/Database/cigarettes.db"
+        let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Library/Database/cigarettes.db"
+        
+        do{db = try Connection(tablePath)
         } catch { fatalError("Cannot connect to database")}
     }
     
@@ -29,25 +33,14 @@ class UserTableHandler: TableHandler {
             fatalError("Failed to write into Table: User")
         }
     }
-    
-    func readFromTable(columnKeys: [String], ID: Expression<Int64>) -> [String: String] {
-        var columnKeyExpressions: [Expressible] = []
-        for columnKey in columnKeys{
-            switch(columnKey){
-            case "id", "Gewicht", "Durchschnitt", "Schachtelpreis":
-                columnKeyExpressions.append(Expression<Int64>(columnKey))
-            case "Geburtsdatum", "Name", "Raucheranfangsjahr":
-                columnKeyExpressions.append(Expression<String>(columnKey))
-            default:
-                fatalError("Not able to cast " + columnKey + " to any type of Expression")
-            }
-        }
-        let query = user.select(columnKeyExpressions).where(userID == ID)
+
+    func getRowFromTable(columnKeys: [String], identificators: [Expressible]) -> [String: String] {
+        let columnKeyExpressions: [Expressible] = getColumKeyExpressions(columnKeys: columnKeys)
+        let query = user.select(columnKeyExpressions).where(userID == Expression<Int64>(getStandardString(expression: identificators[0])))
         var returnDictionary: [String: String] = [:]
         do{
-            
             for userRow in try db.prepare(query){
-                for columnKey in columnKeys{
+                for columnKey in columnKeys {
                     switch(columnKey){
                     case "id":
                         returnDictionary["id"] = "\(userRow[userID])"
@@ -64,17 +57,35 @@ class UserTableHandler: TableHandler {
                     case "Raucheranfangsjahr":
                         returnDictionary["Raucheranfangsjahr"] = "\(userRow[userID])"
                     default:
-                        fatalError("Not able to print the following" + columnKey + " to any type of Expression")
+                        fatalError("Not able to retrieve RowData for the following: " + columnKey)
+                            }
                         }
                     }
+                    return returnDictionary
                 }
-            return returnDictionary
-            }
         catch{
             fatalError("Not able to read from table.")
         }
     
     }
     
+    private func getStandardString(expression: Expressible) -> String{
+        let returnString: String = expression.expression.template.trimmingCharacters(in: CharacterSet.init(charactersIn: " \""))
+        return returnString
+    }
     
+    private func getColumKeyExpressions(columnKeys: [String]) -> [Expressible]{
+        var columnKeyExpressions: [Expressible] = []
+        for columnKey in columnKeys{
+            switch(columnKey){
+            case "id", "Gewicht", "Durchschnitt", "Schachtelpreis":
+                columnKeyExpressions.append(Expression<Int64>(columnKey))
+            case "Geburtsdatum", "Name", "Raucheranfangsjahr":
+                columnKeyExpressions.append(Expression<String>(columnKey))
+            default:
+                fatalError("Not able to cast " + columnKey + " to any type of Expression")
+            }
+        }
+        return columnKeyExpressions
+    }
 }
