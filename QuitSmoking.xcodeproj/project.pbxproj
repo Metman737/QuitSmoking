@@ -16,7 +16,7 @@
 		35530D03212ABF6000A173D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */; };
 		35530D0E212ABF6000A173D6 /* QuitSmokingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */; };
 		35530D19212ABF6000A173D6 /* QuitSmokingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */; };
-		3560614D219AD68800E7CBA3 /* CigarettesTableWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560614C219AD68800E7CBA3 /* CigarettesTableWriter.swift */; };
+		3560614D219AD68800E7CBA3 /* CigaretteTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560614C219AD68800E7CBA3 /* CigaretteTableHandler.swift */; };
 		357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357543D6219062D400C0BC68 /* UserInformationViewController.swift */; };
 		357ACC13219ADE9700BCB73F /* UserTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357ACC12219ADE9700BCB73F /* UserTableHandler.swift */; };
 		35BCD7F9219C475B00FEC81A /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */; };
@@ -60,7 +60,7 @@
 		35530D14212ABF6000A173D6 /* QuitSmokingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitSmokingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingUITests.swift; sourceTree = "<group>"; };
 		35530D1A212ABF6000A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3560614C219AD68800E7CBA3 /* CigarettesTableWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarettesTableWriter.swift; sourceTree = "<group>"; };
+		3560614C219AD68800E7CBA3 /* CigaretteTableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigaretteTableHandler.swift; sourceTree = "<group>"; };
 		357543D6219062D400C0BC68 /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
 		357ACC12219ADE9700BCB73F /* UserTableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableHandler.swift; sourceTree = "<group>"; };
 		35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 				357543D6219062D400C0BC68 /* UserInformationViewController.swift */,
 				35FF4D17219180A700EB65D6 /* TableHandler.swift */,
 				35530CF7212ABF5F00A173D6 /* MainViewController.swift */,
-				3560614C219AD68800E7CBA3 /* CigarettesTableWriter.swift */,
+				3560614C219AD68800E7CBA3 /* CigaretteTableHandler.swift */,
 				357ACC12219ADE9700BCB73F /* UserTableHandler.swift */,
 				35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */,
 				35BCD7FA219C482C00FEC81A /* SegueFromRight.swift */,
@@ -439,7 +439,7 @@
 			files = (
 				35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */,
 				35530CF8212ABF5F00A173D6 /* MainViewController.swift in Sources */,
-				3560614D219AD68800E7CBA3 /* CigarettesTableWriter.swift in Sources */,
+				3560614D219AD68800E7CBA3 /* CigaretteTableHandler.swift in Sources */,
 				357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */,
 				35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */,
 				357ACC13219ADE9700BCB73F /* UserTableHandler.swift in Sources */,

@@ -17,8 +17,8 @@ class UserTableHandler: TableHandler {
     let user: Table = Table("User")
     init(){
         //Datenbankkommunikation aufbauen
-        let tablePath = "/Volumes/Extreme 900/Project 05/QuitSmoking/Database/cigarettes.db"
         //let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+        let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db"
         do{db = try Connection(tablePath)
         } catch { fatalError("Cannot connect to database")}
     }
