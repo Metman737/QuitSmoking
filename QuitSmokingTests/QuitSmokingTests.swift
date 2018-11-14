@@ -39,6 +39,26 @@ class QuitSmokingTests: XCTestCase {
         XCTAssertEqual(results["Datum"], "22.10.2018")
     }
     
+    func testWriteAndRead(){
+        
+        let cigaretteTableHandler: CigaretteTableHandler = CigaretteTableHandler()
+        let columns: [String] = ["Datum", "Uhrzeit"]
+        var keys: [Expressible] = []
+        
+        keys.append(Expression<String>("23.11.2017"))
+        keys.append(Expression<String>("18:00"))
+        
+        let writeArray = ["Datum":"23.11.2017","Uhrzeit":"18:00","UserID":"2"]
+        cigaretteTableHandler.writeToTable(valueDictionary: writeArray)
+        
+        let results: [String: String] = cigaretteTableHandler.getRowFromTable(columnKeys: columns, identificators: keys)
+        
+        XCTAssertEqual(results["Uhrzeit"], "18:00")
+        XCTAssertEqual(results["Datum"], "23.11.2017")
+        
+    }
+    
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

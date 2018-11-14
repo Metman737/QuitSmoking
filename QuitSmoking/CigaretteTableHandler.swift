@@ -15,7 +15,9 @@ class CigaretteTableHandler: TableHandler {
         //Datenbankkommunikation aufbauen
         // let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
         //let tablePath = "/Volumes/Extreme 900/Project 05/QuitSmoking/Database/cigarettes.db"
-        let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db"
+        //let tablePath = "(application_home)/Library/Database/cigarettes.db"
+        let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Library/Database/cigarettes.db"
+        
         do{db = try Connection(tablePath)
         } catch { fatalError("Cannot connect to database")}
     }
