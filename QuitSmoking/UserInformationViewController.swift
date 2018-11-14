@@ -32,9 +32,6 @@ class UserInformationViewController: UIViewController {
 
     @IBOutlet weak var submitButton: UIButton!
     
-    
-    let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db"
-    let tableName = "User"
     let columnNames: [String] = ["Name", "Geburtstdatum", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
     
     @IBAction func onSubmitTap() {
@@ -42,6 +39,9 @@ class UserInformationViewController: UIViewController {
         if arePreconditionsFulfilled(valueArray: valueDictionary){
             let userTableHandler = UserTableHandler()
             userTableHandler.writeToTable(valueDictionary: valueDictionary)
+            for row in userTableHandler.readFromTable(columnKeys: columnNames, ID: Expression<Int64>("2")){
+                print (row)
+            }
         }
     }
     

@@ -29,13 +29,15 @@ class QuitSmokingTests: XCTestCase {
     }
     
     func testReadFromDatabase(){
-        let columns: [String] = ["Name","Geburtsdatum"]
+        let columns: [String] = ["Uhrzeit","Datum","UserID"]
         let userID = Expression<Int64>("2")
-        let userTableHandler: UserTableHandler = UserTableHandler()
-        let results: [String: String] = userTableHandler.readFromTable(columnKeys: columns, ID: userID)
-        
-        XCTAssertEqual(results["Name"], "Leon")
-        XCTAssertEqual(results["Geburtsdatum"], "16.06.1995")
+        let cigaretteTableHandler: CigaretteTableHandler = CigaretteTableHandler()
+        let results: [String: String] = cigaretteTableHandler.readFromTable(columnKeys: columns, ID: userID)
+        for result in results{
+            print (result)
+        }
+        XCTAssertEqual(results["Uhrzeit"], "22:30")
+        XCTAssertEqual(results["Datum"], "22.10.2018")
     }
     
     func testPerformanceExample() {

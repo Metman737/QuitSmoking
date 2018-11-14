@@ -17,7 +17,8 @@ class UserTableHandler: TableHandler {
     let user: Table = Table("User")
     init(){
         //Datenbankkommunikation aufbauen
-        do{db = try Connection("/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Database/cigarettes.db")
+        let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+        do{db = try Connection(tablePath)
         } catch { fatalError("Cannot connect to database")}
     }
     
@@ -31,21 +32,10 @@ class UserTableHandler: TableHandler {
     }
     
     func readFromTable(columnKeys: [String], ID: Expression<Int64>) -> [String: String] {
-        var columnKeyExpressions: [Expressible] = []
-        for columnKey in columnKeys{
-            switch(columnKey){
-            case "id", "Gewicht", "Durchschnitt", "Schachtelpreis":
-                columnKeyExpressions.append(Expression<Int64>(columnKey))
-            case "Geburtsdatum", "Name", "Raucheranfangsjahr":
-                columnKeyExpressions.append(Expression<String>(columnKey))
-            default:
-                fatalError("Not able to cast " + columnKey + " to any type of Expression")
-            }
-        }
+        let columnKeyExpressions: [Expressible] = getColumKeyExpressions(columnKeys: columnKeys)
         let query = user.select(columnKeyExpressions).where(userID == ID)
         var returnDictionary: [String: String] = [:]
         do{
-            
             for userRow in try db.prepare(query){
                 for columnKey in columnKeys{
                     switch(columnKey){
@@ -64,7 +54,7 @@ class UserTableHandler: TableHandler {
                     case "Raucheranfangsjahr":
                         returnDictionary["Raucheranfangsjahr"] = "\(userRow[userID])"
                     default:
-                        fatalError("Not able to print the following" + columnKey + " to any type of Expression")
+                        fatalError("Not able to retrieve RowData for the following: " + columnKey)
                         }
                     }
                 }
@@ -76,5 +66,18 @@ class UserTableHandler: TableHandler {
     
     }
     
-    
+    private func getColumKeyExpressions(columnKeys: [String]) -> [Expressible]{
+        var columnKeyExpressions: [Expressible] = []
+        for columnKey in columnKeys{
+            switch(columnKey){
+            case "id", "Gewicht", "Durchschnitt", "Schachtelpreis":
+                columnKeyExpressions.append(Expression<Int64>(columnKey))
+            case "Geburtsdatum", "Name", "Raucheranfangsjahr":
+                columnKeyExpressions.append(Expression<String>(columnKey))
+            default:
+                fatalError("Not able to cast " + columnKey + " to any type of Expression")
+            }
+        }
+        return columnKeyExpressions
+    }
 }
