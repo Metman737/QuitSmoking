@@ -31,7 +31,7 @@ class UserTableHandler: TableHandler {
     }
     
     func readFromTable(columnKeys: [String], ID: Expression<Int64>) -> [String: String] {
-        let columnKeyExpressions: [Expressible]
+        var columnKeyExpressions: [Expressible] = []
         for columnKey in columnKeys{
             switch(columnKey){
             case "id", "Gewicht", "Durchschnitt", "Schachtelpreis":
@@ -43,25 +43,26 @@ class UserTableHandler: TableHandler {
             }
         }
         let query = user.select(columnKeyExpressions).where(userID == ID)
-        var returnDictionary: [String: String]
+        var returnDictionary: [String: String] = [:]
         do{
-            for user in try db.prepare(user.select(query)){
+            
+            for userRow in try db.prepare(query){
                 for columnKey in columnKeys{
                     switch(columnKey){
                     case "id":
-                        returnDictionary["id"] = "\(user[userID])"
+                        returnDictionary["id"] = "\(userRow[userID])"
                     case "Gewicht":
-                            returnDictionary["Gewicht"] = "\(user[userGewicht])"
+                        returnDictionary["Gewicht"] = "\(userRow[userGewicht])"
                     case "Durchschnitt":
-                        returnDictionary["Durchschnitt"] = "\(user[userDurchschnitt])"
+                        returnDictionary["Durchschnitt"] = "\(userRow[userDurchschnitt])"
                     case "Schachtelpreis":
-                        returnDictionary["Schachtelpreis"] = "\(user[userSchachtelpreis])"
+                        returnDictionary["Schachtelpreis"] = "\(userRow[userSchachtelpreis])"
                     case "Geburtsdatum":
-                        returnDictionary["Geburtsdatum"] =  "\(user[userGeburtsdatum])"
+                        returnDictionary["Geburtsdatum"] =  "\(userRow[userGeburtsdatum])"
                     case "Name":
-                        returnDictionary["Name"] = "\(user[userName])"
+                        returnDictionary["Name"] = "\(userRow[userName])"
                     case "Raucheranfangsjahr":
-                        returnDictionary["Raucheranfangsjahr"] = "\(user[userID])"
+                        returnDictionary["Raucheranfangsjahr"] = "\(userRow[userID])"
                     default:
                         fatalError("Not able to print the following" + columnKey + " to any type of Expression")
                         }
@@ -74,4 +75,6 @@ class UserTableHandler: TableHandler {
         }
     
     }
+    
+    
 }

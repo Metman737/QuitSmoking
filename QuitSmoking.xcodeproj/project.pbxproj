@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A620D2919B6ECCD374CDB28 /* Pods_QuitSmokingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9AAEDE5D9A545CC4415672 /* Pods_QuitSmokingTests.framework */; };
 		35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530CF5212ABF5F00A173D6 /* AppDelegate.swift */; };
 		35530CF8212ABF5F00A173D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530CF7212ABF5F00A173D6 /* ViewController.swift */; };
 		35530CFB212ABF5F00A173D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530CF9212ABF5F00A173D6 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		357ACC13219ADE9700BCB73F /* UserTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357ACC12219ADE9700BCB73F /* UserTableHandler.swift */; };
 		35FF4D18219180A700EB65D6 /* TableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF4D17219180A700EB65D6 /* TableHandler.swift */; };
 		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; };
+		95FB7B562F992B554139B10F /* Pods_QuitSmokingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C1FA23064E8F3C7A6F8EB2 /* Pods_QuitSmokingUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		171CB07844A1183B7A913FDB /* Pods-QuitSmoking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.debug.xcconfig"; sourceTree = "<group>"; };
+		19191AA4FD056F39B8E11999 /* Pods-QuitSmokingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTests/Pods-QuitSmokingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		35530CF2212ABF5F00A173D6 /* QuitSmoking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmoking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35530CF5212ABF5F00A173D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35530CF7212ABF5F00A173D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +63,12 @@
 		357ACC12219ADE9700BCB73F /* UserTableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableHandler.swift; sourceTree = "<group>"; };
 		35FF4D17219180A700EB65D6 /* TableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHandler.swift; sourceTree = "<group>"; };
 		9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.release.xcconfig"; sourceTree = "<group>"; };
+		92493D9E366FE965DCFFDCC6 /* Pods-QuitSmokingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingUITests/Pods-QuitSmokingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmoking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33AB0E3D6D7965B8CE8C7CC /* Pods-QuitSmokingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingUITests/Pods-QuitSmokingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC600010F0AAF448B080A4EE /* Pods-QuitSmokingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTests/Pods-QuitSmokingTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD9AAEDE5D9A545CC4415672 /* Pods_QuitSmokingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmokingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0C1FA23064E8F3C7A6F8EB2 /* Pods_QuitSmokingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmokingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A620D2919B6ECCD374CDB28 /* Pods_QuitSmokingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95FB7B562F992B554139B10F /* Pods_QuitSmokingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +104,10 @@
 			children = (
 				171CB07844A1183B7A913FDB /* Pods-QuitSmoking.debug.xcconfig */,
 				9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */,
+				19191AA4FD056F39B8E11999 /* Pods-QuitSmokingTests.debug.xcconfig */,
+				DC600010F0AAF448B080A4EE /* Pods-QuitSmokingTests.release.xcconfig */,
+				D33AB0E3D6D7965B8CE8C7CC /* Pods-QuitSmokingUITests.debug.xcconfig */,
+				92493D9E366FE965DCFFDCC6 /* Pods-QuitSmokingUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -160,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */,
+				DD9AAEDE5D9A545CC4415672 /* Pods_QuitSmokingTests.framework */,
+				F0C1FA23064E8F3C7A6F8EB2 /* Pods_QuitSmokingUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35530D20212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmokingTests" */;
 			buildPhases = (
+				F610A23E190490B6FA47ED69 /* [CP] Check Pods Manifest.lock */,
 				35530D05212ABF6000A173D6 /* Sources */,
 				35530D06212ABF6000A173D6 /* Frameworks */,
 				35530D07212ABF6000A173D6 /* Resources */,
+				C41AF95B6B9E6D6D2B303A9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35530D23212ABF6000A173D6 /* Build configuration list for PBXNativeTarget "QuitSmokingUITests" */;
 			buildPhases = (
+				BEA7A7390C45F2F2BC836EB3 /* [CP] Check Pods Manifest.lock */,
 				35530D10212ABF6000A173D6 /* Sources */,
 				35530D11212ABF6000A173D6 /* Frameworks */,
 				35530D12212ABF6000A173D6 /* Resources */,
+				D6C46CFF22076FE676003BC2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,15 +321,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-QuitSmoking-checkManifestLockResult.txt",
 			);
@@ -323,21 +339,89 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEA7A7390C45F2F2BC836EB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuitSmokingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C41AF95B6B9E6D6D2B303A9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuitSmokingTests/Pods-QuitSmokingTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuitSmokingTests/Pods-QuitSmokingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6C46CFF22076FE676003BC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuitSmokingUITests/Pods-QuitSmokingUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuitSmokingUITests/Pods-QuitSmokingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F610A23E190490B6FA47ED69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuitSmokingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -564,6 +648,7 @@
 		};
 		35530D21212ABF6000A173D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19191AA4FD056F39B8E11999 /* Pods-QuitSmokingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +669,7 @@
 		};
 		35530D22212ABF6000A173D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC600010F0AAF448B080A4EE /* Pods-QuitSmokingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -604,6 +690,7 @@
 		};
 		35530D24212ABF6000A173D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33AB0E3D6D7965B8CE8C7CC /* Pods-QuitSmokingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -625,6 +712,7 @@
 		};
 		35530D25212ABF6000A173D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92493D9E366FE965DCFFDCC6 /* Pods-QuitSmokingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

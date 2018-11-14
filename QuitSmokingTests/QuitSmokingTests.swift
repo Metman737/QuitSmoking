@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SQLite
 @testable import QuitSmoking
 
 class QuitSmokingTests: XCTestCase {
@@ -24,6 +25,17 @@ class QuitSmokingTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    }
+    
+    func testReadFromDatabase(){
+        let columns: [String] = ["Name","Geburtsdatum"]
+        let userID = Expression<Int64>("2")
+        let userTableHandler: UserTableHandler = UserTableHandler()
+        let results: [String: String] = userTableHandler.readFromTable(columnKeys: columns, ID: userID)
+        
+        XCTAssertEqual(results["Name"], "Leon")
+        XCTAssertEqual(results["Geburtsdatum"], "16.06.1995")
     }
     
     func testPerformanceExample() {
