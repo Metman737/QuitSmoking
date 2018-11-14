@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import QuitSmoking
 
 class QuitSmokingUITests: XCTestCase {
         
@@ -73,8 +74,5 @@ class QuitSmokingUITests: XCTestCase {
         textField.tap()
         element.children(matching: .other).element(boundBy: 2).children(matching: .textField).element.tap()
         
-        
-        
     }
-    
 }
