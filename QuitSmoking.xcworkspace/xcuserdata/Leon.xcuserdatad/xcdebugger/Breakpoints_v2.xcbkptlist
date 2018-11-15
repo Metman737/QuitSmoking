@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QuitSmoking/CigaretteTableHandler.swift"
-            timestampString = "563966568.6163861"
+            timestampString = "563973228.677287"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "getRowsOfDateSpan(startDate:endDate:)"
             landmarkType = "7">
          </BreakpointContent>

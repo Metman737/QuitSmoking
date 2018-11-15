@@ -27,7 +27,7 @@ class UserTableHandler: TableHandler {
     
     func writeToTable(valueDictionary: [String: String]) {
         do{
-            try db.run(user.insert(or: .replace, userID <- 1, userGeburtsdatum <- valueDictionary["Geburtstdatum"]!, userName <- valueDictionary["Name"]!, userGewicht <- Int64(valueDictionary["Gewicht"]!)!, userRaucherSeit <- valueDictionary["Raucheranfangsjahr"]!, userDurchschnitt <- Int64(valueDictionary["Durchschnitt"]!)!, userSchachtelpreis <- Int64(valueDictionary["Schachtelpreis"]!)!))
+            try db.run(user.insert(or: .replace, userID <- 1, userGeburtsdatum <- valueDictionary["Geburtsdatum"]!, userName <- valueDictionary["Name"]!, userGewicht <- Int64(valueDictionary["Gewicht"]!)!, userRaucherSeit <- valueDictionary["Raucheranfangsjahr"]!, userDurchschnitt <- Int64(valueDictionary["Durchschnitt"]!)!, userSchachtelpreis <- Int64(valueDictionary["Schachtelpreis"]!)!))
         }
         catch{
             fatalError("Failed to write into Table: User")
@@ -55,7 +55,7 @@ class UserTableHandler: TableHandler {
                     case "Name":
                         returnDictionary["Name"] = "\(userRow[userName])"
                     case "Raucheranfangsjahr":
-                        returnDictionary["Raucheranfangsjahr"] = "\(userRow[userID])"
+                        returnDictionary["Raucheranfangsjahr"] = "\(userRow[userRaucherSeit])"
                     default:
                         fatalError("Not able to retrieve RowData for the following: " + columnKey)
                             }

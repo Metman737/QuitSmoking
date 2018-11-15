@@ -5,7 +5,6 @@ class CigaretteTableHandler: TableHandler {
     
     // Mögliche Tabelenspalten Zigaretten Tabelle
     var datum = Expression<String>("Datum")
-    var uhrzeit = Expression<String>("Uhrzeit")
     var userID = Expression<Int64>("UserID")
     
     //MARK: Properties
@@ -24,7 +23,7 @@ class CigaretteTableHandler: TableHandler {
     
     func writeToTable(valueDictionary: [String: String]) {
         do{
-            try db.run(Table("Zigaretten").insert(or: .replace, datum <- valueDictionary["Datum"]!, uhrzeit <- valueDictionary["Uhrzeit"]!, userID <- Int64(valueDictionary["UserID"]!)!))
+            try db.run(Table("Zigaretten").insert(or: .replace, datum <- valueDictionary["Datum"]!,  userID <- Int64(valueDictionary["UserID"]!)!))
         }
         catch{
             fatalError("Failed to write into Table: Zigarettes")
@@ -33,7 +32,7 @@ class CigaretteTableHandler: TableHandler {
 
     func getRowFromTable(columnKeys: [String], identificators: [Expressible]) -> [String: String]  {
         let columnKeyExpressions: [Expressible] = getColumnKeyExpressions(columnKeys: columnKeys)
-        let query = cigarettes.select(columnKeyExpressions).where(datum == Expression<String>(getStandardString(expression: identificators[0])) && uhrzeit == Expression<String>(getStandardString(expression: identificators[1])))
+        let query = cigarettes.select(columnKeyExpressions).where(datum == Expression<String>(getStandardString(expression: identificators[0])))
         var returnDictionary: [String: String] = [:]
         do{
             for cigaretteRow in try db.prepare(query){
@@ -43,8 +42,6 @@ class CigaretteTableHandler: TableHandler {
                         returnDictionary["userID"] = "\(cigaretteRow[userID])"
                     case "Datum":
                         returnDictionary["Datum"] = "\(cigaretteRow[datum])"
-                    case "Uhrzeit":
-                        returnDictionary["Uhrzeit"] = "\(cigaretteRow[uhrzeit])"
                     default:
                         fatalError("Not able to retrieve RowData for the following: " + columnKey)
                     }
@@ -67,7 +64,7 @@ class CigaretteTableHandler: TableHandler {
             switch(columnKey){
             case "UserID":
                 columnKeyExpressions.append(Expression<Int64>(columnKey))
-            case "Datum", "Uhrzeit":
+            case "Datum":
                 columnKeyExpressions.append(Expression<String>(columnKey))
             default:
                 fatalError("Not able to cast " + columnKey + " to any type of Expression")
@@ -96,7 +93,6 @@ class CigaretteTableHandler: TableHandler {
             for (row) in stmt {
                 var rowDictionary: [String:String] = [:]
                 rowDictionary["Datum"] = try row.get(datum)
-                rowDictionary["Uhrzeit"] = try row.get(uhrzeit)
                 rowDictionary["userID"] = String(try row.get(userID))
                 result.append(rowDictionary)
             }
