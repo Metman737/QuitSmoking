@@ -10,20 +10,35 @@ class CigaretteTableHandler: TableHandler {
     //MARK: Properties
     var db: Connection
     let cigarettes: Table = Table("Zigaretten")
-    init(){
+    
+    
+    init(path: String){
         //Datenbankkommunikation aufbauen
-        // let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
-        //let tablePath = "/Volumes/Extreme 900/Project 05/QuitSmoking/Database/cigarettes.db"
-        //let tablePath = "(application_home)/Library/Database/cigarettes.db"
-        let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Library/Database/cigarettes.db"
-        
-        do{db = try Connection(tablePath)
+        do{
+            db = try Connection(path)
+            try db.run(cigarettes.create(ifNotExists: true) {t in
+                t.column(datum, primaryKey: true)
+                t.column(userID, unique: true)})
         } catch { fatalError("Cannot connect to database")}
     }
     
+    init(){
+        //Datenbankkommunikation aufbauen
+        let path = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory, .userDomainMask, true
+            ).first!
+        do{
+            db = try Connection("\(path)/cigarettes.db")
+            try db.run(cigarettes.create(ifNotExists: true) {t in
+                t.column(datum, primaryKey: true)
+                t.column(userID, unique: true)})
+        } catch { fatalError("Cannot connect to database")}
+    }
+
+    
     func writeToTable(valueDictionary: [String: String]) {
         do{
-            try db.run(Table("Zigaretten").insert(or: .replace, datum <- valueDictionary["Datum"]!,  userID <- Int64(valueDictionary["UserID"]!)!))
+            try db.run(cigarettes.insert(or: .replace, datum <- valueDictionary["Datum"]!,  userID <- Int64(valueDictionary["UserID"]!)!))
         }
         catch{
             fatalError("Failed to write into Table: Zigarettes")
