@@ -77,46 +77,29 @@ class CigaretteTableHandler: TableHandler {
     }
     
     func getRowsOfDateSpan(startDate: String, endDate: String) -> [[String:String]] {
-        
-        var result: [[String:String]] = [[:]]
-        
-        do{
-            //let stmt = try db.prepare("SELECT * FROM Zigaretten WHERE Datum BETWEEN startDate AND endDate")
-            let stmt = try db.prepare(cigarettes.filter(startDate...endDate ~= datum))
-            
-            for (index, row) in stmt.enumerated() {
-                result[index]["Datum"] = try row.get(datum)
-                result[index]["Uhrzeit"] = try row.get(uhrzeit)
-                result[index]["userID"] = String(try row.get(userID))
-                
-                print(result[index]["Datum"]!)
-                print(result[index]["Uhrzeit"]!)
-                print(result[index]["userID"]!)
-            }
-            
-        }catch{
-            fatalError("Failed to read from Table: Zigarettes")
-        }
-        return result
+
+        //let stmt = try db.prepare("SELECT * FROM Zigaretten WHERE Datum BETWEEN startDate AND endDate")
+        return self.getStatementRows(query: cigarettes.filter(startDate...endDate ~= datum))
+      
     }
     
     func getRowsOfDay(date: String) -> [[String:String]] {
-        
-        var result: [[String:String]] = [[:]]
-        
-        do{
+
         //let stmt = try db.prepare("SELECT * FROM Zigaretten WHERE Datum = '\(date)'")
-        let stmt = try db.prepare(cigarettes.filter(datum == date))
-        for (index, row) in stmt.enumerated() {
-            result[index]["Datum"] = try row.get(datum)
-            result[index]["Uhrzeit"] = try row.get(uhrzeit)
-            result[index]["userID"] = String(try row.get(userID))
-            
-            print(result[index]["Datum"]!)
-            print(result[index]["Uhrzeit"]!)
-            print(result[index]["userID"]!)
-        }
-        
+        return self.getStatementRows(query: cigarettes.filter(datum == date))
+    }
+    
+    private func getStatementRows(query: Table) -> [[String:String]]{
+        var result: [[String:String]] = []
+        do{
+            let stmt = try db.prepare(query)
+            for (row) in stmt {
+                var rowDictionary: [String:String] = [:]
+                rowDictionary["Datum"] = try row.get(datum)
+                rowDictionary["Uhrzeit"] = try row.get(uhrzeit)
+                rowDictionary["userID"] = String(try row.get(userID))
+                result.append(rowDictionary)
+            }
         }catch{
             fatalError("Failed to read from Table: Zigarettes")
         }

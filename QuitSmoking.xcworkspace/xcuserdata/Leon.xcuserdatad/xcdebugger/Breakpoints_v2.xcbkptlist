@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuitSmokingTests/QuitSmokingTests.swift"
-            timestampString = "563921893.7442009"
+            filePath = "QuitSmoking/CigaretteTableHandler.swift"
+            timestampString = "563966568.6163861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "testReadRowsOfDateSpan()"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getRowsOfDateSpan(startDate:endDate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

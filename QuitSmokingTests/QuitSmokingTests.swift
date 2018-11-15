@@ -72,6 +72,12 @@ class QuitSmokingTests: XCTestCase {
         cigaretteTableHandler.writeToTable(valueDictionary: writeArray)
         
         let results: [[String:String]] = cigaretteTableHandler.getRowsOfDateSpan(startDate: startDate, endDate: todayDate)
+        for result in results{
+            print(result["Datum"]!)
+            print(result["Uhrzeit"]!)
+            print(result["userID"]!)
+        }
+        
         
         XCTAssertEqual(results[0]["Uhrzeit"], time)
         XCTAssertEqual(results[0]["Datum"], todayDate)
