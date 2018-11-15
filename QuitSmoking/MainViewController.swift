@@ -11,8 +11,15 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var settings: UIButton!
+    @IBOutlet weak var addCigarette: UIButton!
     
-    
+    @IBAction func addCigaretteButtonTapped(_ sender: Any) {
+        let cigaretteTableHandler: CigaretteTableHandler = CigaretteTableHandler()
+        let currentDate = Date().asSQL().trimmingCharacters(in: CharacterSet.init(charactersIn: "\'"))
+        
+        cigaretteTableHandler.writeToTable(valueDictionary: ["Datum":currentDate,"UserID":"1"])
+        
+    }
 
     override func viewDidLoad() {
         

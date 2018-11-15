@@ -32,7 +32,7 @@ class UserInformationViewController: UIViewController {
 
     @IBOutlet weak var submitButton: UIButton!
     
-    let columnNames: [String] = ["Name", "Geburtstdatum", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
+    let columnNames: [String] = ["Name", "Geburtsdatum", "Gewicht", "Raucheranfangsjahr", "Durchschnitt", "Schachtelpreis"]
     
     //MARK: Aktions
     
@@ -41,6 +41,7 @@ class UserInformationViewController: UIViewController {
         if arePreconditionsFulfilled(valueArray: valueDictionary){
             let userTableHandler = UserTableHandler()
             userTableHandler.writeToTable(valueDictionary: valueDictionary)
+            
             /*for row in userTableHandler.readFromTable(columnKeys: columnNames, ID: Expression<Int64>("2")){
                 print (row)
             }*/
@@ -63,6 +64,7 @@ class UserInformationViewController: UIViewController {
         
         birthdayTextField.inputView = datepickerBirthday
         startYearTextField.inputView = datepickerStartYear
+        self.fillTextFields()
         
         super.viewDidLoad()  
     }
@@ -93,7 +95,30 @@ class UserInformationViewController: UIViewController {
         startYearTextField.text = formatter.string(from: sender.date)
     }
     
-    
+    private func fillTextFields(){
+        let userTableHandler: UserTableHandler = UserTableHandler()
+        let databaseValues = userTableHandler.getRowFromTable(columnKeys: columnNames, identificators: [Expression<Int64>("1")])
+        for value in databaseValues{
+            switch (value.key){
+            case "Name": nameTextField.text = value.value
+                break
+            case "Geburtsdatum": birthdayTextField.text = value.value
+                break
+            case "Gewicht": weightTextField.text = value.value
+                break
+            case "Raucheranfangsjahr": startYearTextField.text = value.value
+                break
+            case "Durchschnitt": averageTextFIeld.text = value.value
+                break
+            case "Schachtelpreis": priceTextField.text = value.value
+                break
+            case "id": break
+            default:
+                fatalError("No correlation for: \(value.key) found")
+                break
+            }
+        }
+    }
     
     private func getValueDictionary() -> [String: String] {
         let uiTextFields = getUITextFields()

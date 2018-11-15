@@ -15,19 +15,46 @@ class UserTableHandler: TableHandler {
     //MARK: Properties
     var db: Connection
     let user: Table = Table("User")
+    
+    init(path: String){
+        //Datenbankkommunikation aufbauen
+        do{
+            db = try Connection(path)
+            try db.run(user.create(ifNotExists: true) {t in
+                t.column(userID, primaryKey: true)
+                t.column(userName, unique: false)
+                t.column(userGeburtsdatum, unique: false)
+                t.column(userGewicht, unique: false)
+                t.column(userRaucherSeit, unique: false)
+                t.column(userDurchschnitt, unique: false)
+                t.column(userSchachtelpreis, unique: false)
+            })
+        } catch { fatalError("Cannot connect to database")}
+    }
+    
     init(){
         //Datenbankkommunikation aufbauen
-        //let tablePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
-        //let tablePath = "(application_home)/Library/Database/cigarettes.db"
-        let tablePath = "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/Library/Database/cigarettes.db"
+        let path = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory, .userDomainMask, true
+            ).first!
         
-        do{db = try Connection(tablePath)
+        do{
+            db = try Connection("\(path)/cigarettes.db")
+            try db.run(user.create(ifNotExists: true) {t in
+                t.column(userID, primaryKey: true)
+                t.column(userName, unique: false)
+                t.column(userGeburtsdatum, unique: false)
+                t.column(userGewicht, unique: false)
+                t.column(userRaucherSeit, unique: false)
+                t.column(userDurchschnitt, unique: false)
+                t.column(userSchachtelpreis, unique: false)
+            })
         } catch { fatalError("Cannot connect to database")}
     }
     
     func writeToTable(valueDictionary: [String: String]) {
         do{
-            try db.run(user.insert(or: .replace, userID <- 1, userGeburtsdatum <- valueDictionary["Geburtstdatum"]!, userName <- valueDictionary["Name"]!, userGewicht <- Int64(valueDictionary["Gewicht"]!)!, userRaucherSeit <- valueDictionary["Raucheranfangsjahr"]!, userDurchschnitt <- Int64(valueDictionary["Durchschnitt"]!)!, userSchachtelpreis <- Int64(valueDictionary["Schachtelpreis"]!)!))
+            try db.run(user.insert(or: .replace, userID <- 1, userGeburtsdatum <- valueDictionary["Geburtsdatum"]!, userName <- valueDictionary["Name"]!, userGewicht <- Int64(valueDictionary["Gewicht"]!)!, userRaucherSeit <- valueDictionary["Raucheranfangsjahr"]!, userDurchschnitt <- Int64(valueDictionary["Durchschnitt"]!)!, userSchachtelpreis <- Int64(valueDictionary["Schachtelpreis"]!)!))
         }
         catch{
             fatalError("Failed to write into Table: User")
@@ -55,7 +82,7 @@ class UserTableHandler: TableHandler {
                     case "Name":
                         returnDictionary["Name"] = "\(userRow[userName])"
                     case "Raucheranfangsjahr":
-                        returnDictionary["Raucheranfangsjahr"] = "\(userRow[userID])"
+                        returnDictionary["Raucheranfangsjahr"] = "\(userRow[userRaucherSeit])"
                     default:
                         fatalError("Not able to retrieve RowData for the following: " + columnKey)
                             }
