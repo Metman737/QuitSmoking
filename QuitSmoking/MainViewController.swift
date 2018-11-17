@@ -11,11 +11,13 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var settings: UIButton!
+    @IBOutlet weak var statisticsButton: UIButton!
     @IBOutlet weak var addCigarette: UIButton!
     
     @IBOutlet weak var cigarettesToday: UILabel!
     @IBOutlet weak var cigarettesTotal: UILabel!
     @IBOutlet weak var moneySpend: UILabel!
+    
     
     
     @IBAction func addCigaretteButtonTapped(_ sender: Any) {
