@@ -49,6 +49,21 @@ class CalculationController{
     }
     
     func getAverageSmokedPerDay(cigaretteTableHandler: CigaretteTableHandler) -> String {
-        return ""
+        
+        let total = self.getTotalCigarettes(cigaretteTableHandler: cigaretteTableHandler)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        guard let firstCigaretteDate = dateFormatter.date(from: cigaretteTableHandler.getFirstEntry()["Datum"]!) else {
+            fatalError("ERROR: Date conversion failed due to mismatched format.")
+        }
+        let calendar = NSCalendar.current
+        
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDay(for: firstCigaretteDate)
+        let date2 = calendar.startOfDay(for: Date())
+        let days = calendar.dateComponents([.day], from: date1, to: date2).day
+        
+        let average = Int(total)!/days!
+        return String(average)
     }
 }

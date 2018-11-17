@@ -47,5 +47,6 @@ class MainViewController: UIViewController {
         cigarettesToday.text = calculationController.getCigarettesOfToday(cigaretteTableHandler: cigaretteTableHandler)
         cigarettesTotal.text = calculationController.getTotalCigarettes(cigaretteTableHandler: cigaretteTableHandler)
         moneySpend.text = calculationController.getMoneySpend(cigaretteTableHandler: cigaretteTableHandler)
+        print(calculationController.getAverageSmokedPerDay(cigaretteTableHandler: cigaretteTableHandler))
     }
 }
