@@ -22,6 +22,7 @@
 		35BCD7F9219C475B00FEC81A /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */; };
 		35BCD7FB219C482C00FEC81A /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BCD7FA219C482C00FEC81A /* SegueFromRight.swift */; };
 		35C8142B219D9AA90044F87C /* cigarettes.db in Resources */ = {isa = PBXBuildFile; fileRef = 35C8142A219D9AA90044F87C /* cigarettes.db */; };
+		35C8142D219ED8F30044F87C /* CalculationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8142C219ED8F30044F87C /* CalculationController.swift */; };
 		35FF4D18219180A700EB65D6 /* TableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF4D17219180A700EB65D6 /* TableHandler.swift */; };
 		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; };
 		95FB7B562F992B554139B10F /* Pods_QuitSmokingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C1FA23064E8F3C7A6F8EB2 /* Pods_QuitSmokingUITests.framework */; };
@@ -68,6 +69,7 @@
 		35BCD7FA219C482C00FEC81A /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		35C81425219D98D00044F87C /* cigarettes.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = cigarettes.db; path = QuitSmoking/Library/Database/cigarettes.db; sourceTree = "<group>"; };
 		35C8142A219D9AA90044F87C /* cigarettes.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = cigarettes.db; path = QuitSmoking/Library/Database/cigarettes.db; sourceTree = "<group>"; };
+		35C8142C219ED8F30044F87C /* CalculationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationController.swift; sourceTree = "<group>"; };
 		35FF4D17219180A700EB65D6 /* TableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHandler.swift; sourceTree = "<group>"; };
 		9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.release.xcconfig"; sourceTree = "<group>"; };
 		92493D9E366FE965DCFFDCC6 /* Pods-QuitSmokingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingUITests/Pods-QuitSmokingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				357ACC12219ADE9700BCB73F /* UserTableHandler.swift */,
 				35BCD7F8219C475B00FEC81A /* SegueFromLeft.swift */,
 				35BCD7FA219C482C00FEC81A /* SegueFromRight.swift */,
+				35C8142C219ED8F30044F87C /* CalculationController.swift */,
 			);
 			path = QuitSmoking;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */,
+				35C8142D219ED8F30044F87C /* CalculationController.swift in Sources */,
 				35530CF8212ABF5F00A173D6 /* MainViewController.swift in Sources */,
 				3560614D219AD68800E7CBA3 /* CigaretteTableHandler.swift in Sources */,
 				357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */,

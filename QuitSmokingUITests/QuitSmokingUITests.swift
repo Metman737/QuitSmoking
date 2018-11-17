@@ -62,6 +62,15 @@ class QuitSmokingUITests: XCTestCase {
 
     }
     
+    func testSwitchBetweenViews(){
+        
+        let app = XCUIApplication()
+        let usersettingsimageButton = app.buttons["UserSettingsImage"]
+        usersettingsimageButton.tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element(boundBy: 1).buttons["BackImage"].tap()
+        
+    }
+    
     func testTextfields() {
         
         let app = XCUIApplication()

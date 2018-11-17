@@ -35,7 +35,6 @@ class QuitSmokingTests: XCTestCase {
         
         let todayDate = Date().asSQL().trimmingCharacters(in: CharacterSet.init(charactersIn: "\'"))
         let startDate = Date(timeIntervalSince1970: 0).asSQL().trimmingCharacters(in: CharacterSet.init(charactersIn: "\'"))
-
         
         let writeArray = ["Datum": todayDate,"UserID":"2"]
         cigaretteTableHandler.writeToTable(valueDictionary: writeArray)
@@ -51,6 +50,7 @@ class QuitSmokingTests: XCTestCase {
     
     func testReadRowsOfDay(){
         let cigaretteTableHandler: CigaretteTableHandler = CigaretteTableHandler(path: "/Users/Leon/Development/XCode/Git_repository/QuitSmoking/QuitSmoking/Library/Database/cigarettes.db")
+        
         let todayDate = Date().asSQL().trimmingCharacters(in: CharacterSet.init(charactersIn: "\'"))
         let writeArray = ["Datum": todayDate,"UserID":"2"]
         cigaretteTableHandler.writeToTable(valueDictionary: writeArray)
