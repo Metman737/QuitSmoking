@@ -273,6 +273,13 @@
                                     <segue destination="TnP-e2-hGv" kind="show" customClass="SegueFromRight" customModule="QuitSmoking" customModuleProvider="target" id="2Bv-cq-qVp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42m-Fm-pBn" userLabel="Statistics">
+                                <rect key="frame" x="272" y="78" width="30" height="30"/>
+                                <state key="normal" image="bar-chart-down"/>
+                                <connections>
+                                    <segue destination="Xg4-a4-OUz" kind="show" customClass="SegueFromRight" customModule="QuitSmoking" customModuleProvider="target" id="7A5-1Z-2MN"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zigaretten Heute:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw2-UE-jYZ">
                                 <rect key="frame" x="75.5" y="356.5" width="134.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -286,7 +293,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geld ausgegeben:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZu-gz-W0M">
-                                <rect key="frame" x="70" y="413" width="140" height="21"/>
+                                <rect key="frame" x="70.5" y="413.5" width="139.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -312,8 +319,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="42m-Fm-pBn" secondAttribute="trailing" constant="18" id="1eM-2d-8Q9"/>
                             <constraint firstItem="Nw2-UE-jYZ" firstAttribute="trailing" secondItem="mNv-aj-Ys0" secondAttribute="trailing" id="1xy-7P-i1W"/>
                             <constraint firstItem="6iE-a6-HcF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="666-44-QCu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="42m-Fm-pBn" secondAttribute="bottom" constant="460" id="7wI-ng-rV5"/>
                             <constraint firstItem="b8g-Pk-fs4" firstAttribute="leading" secondItem="Xta-km-gQ0" secondAttribute="leading" id="8P8-Vx-J6p"/>
                             <constraint firstItem="JZu-gz-W0M" firstAttribute="baseline" secondItem="hJT-bB-eON" secondAttribute="baseline" id="CD1-QQ-AwT"/>
                             <constraint firstItem="hJT-bB-eON" firstAttribute="leading" secondItem="Xta-km-gQ0" secondAttribute="leading" id="JUI-Ze-aqU"/>
@@ -327,7 +336,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vAz-9R-QKu" secondAttribute="trailing" constant="16" id="fV9-oq-B2n"/>
                             <constraint firstItem="JZu-gz-W0M" firstAttribute="baseline" secondItem="hJT-bB-eON" secondAttribute="firstBaseline" id="gm3-1N-z0l"/>
                             <constraint firstItem="vAz-9R-QKu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="253" id="iBb-ew-WcF"/>
+                            <constraint firstItem="42m-Fm-pBn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="272" id="inH-3R-rvy"/>
                             <constraint firstItem="b8g-Pk-fs4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="357" id="mde-uK-TsN"/>
+                            <constraint firstItem="42m-Fm-pBn" firstAttribute="top" secondItem="vAz-9R-QKu" secondAttribute="bottom" constant="8" id="t43-aJ-LSG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hJT-bB-eON" secondAttribute="trailing" constant="70" id="uj1-iv-vb1"/>
                             <constraint firstItem="JZu-gz-W0M" firstAttribute="trailing" secondItem="6iE-a6-HcF" secondAttribute="trailing" id="vVt-nT-WKw"/>
                             <constraint firstItem="Nw2-UE-jYZ" firstAttribute="baseline" secondItem="b8g-Pk-fs4" secondAttribute="baseline" id="vfe-Rb-aeH"/>
@@ -341,20 +352,186 @@
                         <outlet property="cigarettesTotal" destination="Xta-km-gQ0" id="wUz-m7-ruj"/>
                         <outlet property="moneySpend" destination="hJT-bB-eON" id="dHR-Wu-jSy"/>
                         <outlet property="settings" destination="vAz-9R-QKu" id="fMN-OV-dUF"/>
+                        <outlet property="statisticsButton" destination="42m-Fm-pBn" id="5UM-R9-1R8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1250.625" y="-55.985915492957744"/>
         </scene>
+        <!--Statistics View Controller-->
+        <scene sceneID="Iho-wU-fae">
+            <objects>
+                <viewController id="Xg4-a4-OUz" customClass="StatisticsViewController" customModule="QuitSmoking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ght-3v-gXh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVe-D8-JVJ">
+                                <rect key="frame" x="11" y="35" width="22" height="26"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="SZo-Gl-KhO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <state key="normal" image="BackImage"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" customClass="SegueFromLeft" customModule="QuitSmoking" customModuleProvider="target" id="l1D-42-xdc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7D-JX-BMD">
+                                <rect key="frame" x="29" y="38" width="38" height="20"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue-SEO-Chart" translatesAutoresizingMaskIntoConstraints="NO" id="vgx-of-c0P">
+                                <rect key="frame" x="124" y="86" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="Dzu-1h-nr0"/>
+                                    <constraint firstAttribute="height" constant="72" id="bQi-75-Jb2"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="E07-Et-Sch">
+                                <rect key="frame" x="19" y="213" width="282" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ec2-QS-IF5">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="250"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Zigaretten (heute):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ked-AJ-s5f">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zigaretten (Ø - tägl.):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXS-Rt-FAB">
+                                                <rect key="frame" x="0.0" y="63" width="260" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="VjH-d8-nHs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zigaretten (insgesamt):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpq-AK-0vG">
+                                                <rect key="frame" x="0.0" y="118.5" width="260" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ausgaben (täglich):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh9-ef-eXD">
+                                                <rect key="frame" x="0.0" y="174" width="260" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="SaL-ww-kK0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ausgaben (insgesamt):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gy-J0-Y8k">
+                                                <rect key="frame" x="0.0" y="229.5" width="260" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="ySY-cg-Rwj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="cSB-ze-heb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="BJf-g1-K0A">
+                                        <rect key="frame" x="262" y="0.0" width="20" height="250"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaV-pS-5cH" userLabel="cigarettesToday">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="m59-cz-1eh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqy-l2-qhD" userLabel="cigarettesDailyAverage">
+                                                <rect key="frame" x="0.0" y="63" width="20" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="PxC-gi-7C6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6e-i2-crT" userLabel="cigarettesTotal">
+                                                <rect key="frame" x="0.0" y="118.5" width="20" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qT-yS-fdJ" userLabel="spendingsDaily">
+                                                <rect key="frame" x="0.0" y="174" width="20" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="a2d-Mr-CKI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30J-zu-xy2" userLabel="spendingsTotal">
+                                                <rect key="frame" x="0.0" y="229.5" width="20" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="5nQ-h7-DcH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="azJ-nl-GBi"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="HRr-7x-JsJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1kP-Kb-Qpj" firstAttribute="trailing" secondItem="pVe-D8-JVJ" secondAttribute="trailing" constant="287" id="7UT-1m-ULf"/>
+                            <constraint firstItem="vgx-of-c0P" firstAttribute="top" secondItem="1kP-Kb-Qpj" secondAttribute="top" constant="66" id="7ed-zZ-kcP"/>
+                            <constraint firstItem="E07-Et-Sch" firstAttribute="centerX" secondItem="vgx-of-c0P" secondAttribute="centerX" id="9SV-at-D1I"/>
+                            <constraint firstItem="pVe-D8-JVJ" firstAttribute="top" secondItem="1kP-Kb-Qpj" secondAttribute="top" constant="15" id="Fbs-Xh-wMO"/>
+                            <constraint firstItem="P7D-JX-BMD" firstAttribute="leading" secondItem="1kP-Kb-Qpj" secondAttribute="leading" constant="29" id="HBL-Ye-QPg"/>
+                            <constraint firstItem="pVe-D8-JVJ" firstAttribute="centerY" secondItem="P7D-JX-BMD" secondAttribute="centerY" id="SAg-X3-ldh"/>
+                            <constraint firstItem="P7D-JX-BMD" firstAttribute="top" secondItem="1kP-Kb-Qpj" secondAttribute="top" constant="18" id="as9-ao-ulV"/>
+                            <constraint firstItem="E07-Et-Sch" firstAttribute="top" secondItem="vgx-of-c0P" secondAttribute="bottom" constant="55" id="eWd-gV-aUM"/>
+                            <constraint firstItem="vgx-of-c0P" firstAttribute="leading" secondItem="1kP-Kb-Qpj" secondAttribute="leading" constant="124" id="hPD-Wm-uZL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1kP-Kb-Qpj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egv-bQ-Y7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2250" y="-57.04225352112676"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AddCigarrette" width="512" height="512"/>
         <image name="BackImage" width="75" height="75"/>
+        <image name="Blue-SEO-Chart" width="127.91999816894531" height="127.91999816894531"/>
         <image name="UserImage" width="78" height="78"/>
         <image name="UserSettingsImage" width="75" height="75"/>
+        <image name="bar-chart-down" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wTu-mZ-hHv"/>
+        <segue reference="l1D-42-xdc"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,7 +12,6 @@
 		35530CF8212ABF5F00A173D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530CF7212ABF5F00A173D6 /* MainViewController.swift */; };
 		35530CFB212ABF5F00A173D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530CF9212ABF5F00A173D6 /* Main.storyboard */; };
 		35530CFE212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */; };
-		35530D00212ABF6000A173D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35530CFF212ABF6000A173D6 /* Assets.xcassets */; };
 		35530D03212ABF6000A173D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */; };
 		35530D0E212ABF6000A173D6 /* QuitSmokingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D0D212ABF6000A173D6 /* QuitSmokingTests.swift */; };
 		35530D19212ABF6000A173D6 /* QuitSmokingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35530D18212ABF6000A173D6 /* QuitSmokingUITests.swift */; };
@@ -25,6 +24,8 @@
 		35C8142D219ED8F30044F87C /* CalculationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8142C219ED8F30044F87C /* CalculationController.swift */; };
 		35FF4D18219180A700EB65D6 /* TableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF4D17219180A700EB65D6 /* TableHandler.swift */; };
 		38624E6F12008B6E666B39F7 /* Pods_QuitSmoking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */; };
+		6149375B21A0506500CEF1A1 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149375A21A0506500CEF1A1 /* StatisticsViewController.swift */; };
+		6149375D21A060CA00CEF1A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6149375C21A060CA00CEF1A1 /* Assets.xcassets */; };
 		95FB7B562F992B554139B10F /* Pods_QuitSmokingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C1FA23064E8F3C7A6F8EB2 /* Pods_QuitSmokingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +54,6 @@
 		35530CF7212ABF5F00A173D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		35530CFA212ABF5F00A173D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35530CFD212ABF5F00A173D6 /* QuitSmoking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuitSmoking.xcdatamodel; sourceTree = "<group>"; };
-		35530CFF212ABF6000A173D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35530D02212ABF6000A173D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35530D04212ABF6000A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35530D09212ABF6000A173D6 /* QuitSmokingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitSmokingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +71,8 @@
 		35C8142A219D9AA90044F87C /* cigarettes.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = cigarettes.db; path = QuitSmoking/Library/Database/cigarettes.db; sourceTree = "<group>"; };
 		35C8142C219ED8F30044F87C /* CalculationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationController.swift; sourceTree = "<group>"; };
 		35FF4D17219180A700EB65D6 /* TableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHandler.swift; sourceTree = "<group>"; };
+		6149375A21A0506500CEF1A1 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		6149375C21A060CA00CEF1A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9009B57933D8CB9765BA67F4 /* Pods-QuitSmoking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmoking.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmoking/Pods-QuitSmoking.release.xcconfig"; sourceTree = "<group>"; };
 		92493D9E366FE965DCFFDCC6 /* Pods-QuitSmokingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingUITests/Pods-QuitSmokingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4C557542E7CE6025FC69A47 /* Pods_QuitSmoking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmoking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,11 +151,12 @@
 			children = (
 				35530CF5212ABF5F00A173D6 /* AppDelegate.swift */,
 				35530CF9212ABF5F00A173D6 /* Main.storyboard */,
-				35530CFF212ABF6000A173D6 /* Assets.xcassets */,
 				35530D01212ABF6000A173D6 /* LaunchScreen.storyboard */,
 				35530D04212ABF6000A173D6 /* Info.plist */,
 				35530CFC212ABF5F00A173D6 /* QuitSmoking.xcdatamodeld */,
+				6149375C21A060CA00CEF1A1 /* Assets.xcassets */,
 				357543D6219062D400C0BC68 /* UserInformationViewController.swift */,
+				6149375A21A0506500CEF1A1 /* StatisticsViewController.swift */,
 				35FF4D17219180A700EB65D6 /* TableHandler.swift */,
 				35530CF7212ABF5F00A173D6 /* MainViewController.swift */,
 				3560614C219AD68800E7CBA3 /* CigaretteTableHandler.swift */,
@@ -312,7 +315,7 @@
 			files = (
 				35C8142B219D9AA90044F87C /* cigarettes.db in Resources */,
 				35530D03212ABF6000A173D6 /* LaunchScreen.storyboard in Resources */,
-				35530D00212ABF6000A173D6 /* Assets.xcassets in Resources */,
+				6149375D21A060CA00CEF1A1 /* Assets.xcassets in Resources */,
 				35530CFB212ABF5F00A173D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +457,7 @@
 				35530CF8212ABF5F00A173D6 /* MainViewController.swift in Sources */,
 				3560614D219AD68800E7CBA3 /* CigaretteTableHandler.swift in Sources */,
 				357543D7219062D400C0BC68 /* UserInformationViewController.swift in Sources */,
+				6149375B21A0506500CEF1A1 /* StatisticsViewController.swift in Sources */,
 				35530CF6212ABF5F00A173D6 /* AppDelegate.swift in Sources */,
 				357ACC13219ADE9700BCB73F /* UserTableHandler.swift in Sources */,
 				35BCD7F9219C475B00FEC81A /* SegueFromLeft.swift in Sources */,
