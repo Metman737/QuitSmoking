@@ -96,9 +96,18 @@ class CigaretteTableHandler: TableHandler {
     }
     
     func getRowsOfDay(date: String) -> [[String:String]] {
+        
+        let cal = Calendar(identifier: .gregorian)
+        let todayMidnight = cal.startOfDay(for: Date()).asSQL().trimmingCharacters(in: CharacterSet.init(charactersIn: "\'"))
 
         //let stmt = try db.prepare("SELECT * FROM Zigaretten WHERE Datum = '\(date)'")
-        return self.getStatementRows(query: cigarettes.filter(datum == date))
+        return self.getRowsOfDateSpan(startDate: todayMidnight, endDate: date)
+    }
+    
+    func getAllRows() -> [[String:String]] {
+        
+        //let stmt = try db.prepare("SELECT * FROM Zigaretten )
+        return self.getStatementRows(query: cigarettes)
     }
     
     private func getStatementRows(query: Table) -> [[String:String]]{
